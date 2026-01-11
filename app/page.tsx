@@ -14,11 +14,12 @@ export default function Home() {
     <div className="min-h-screen bg-neutral-50 dark:bg-[#1f1f1f] transition-colors duration-300">
       <Navbar />
       
-      <main className="max-w-4xl mx-auto px-6 pt-28 pb-16 space-y-20 text-justify">
+      <main className="max-w-4xl mx-auto px-6 pt-28 pb-16 space-y-20">
         <Hero />
         <About />
+          <TechStack />
         <Experience />
-        <TechStack />
+      
         <Projects />
         <Education />
         <SocialLinks />

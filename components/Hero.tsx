@@ -1,54 +1,107 @@
+'use client';
+
 import React from 'react';
-import { MapPin, Calendar, Mail } from 'lucide-react';
+import { MapPin, ArrowRight } from 'lucide-react';
 import { personalInfo } from '@/data/personal';
-import { Button } from './ui/Button';
+import { socialLinks } from '@/data/socialLinks';
 import Image from "next/image";
 
 export function Hero() {
+
+  // Filter to show only specific social platforms in Hero
+  const heroSocials = socialLinks.filter(link => 
+    ["GitHub", "LinkedIn", "X/Twitter"].includes(link.name)
+  );
+
+  const renderTagline = (text: string) => {
+    const parts = text.split('*');
+    return parts.map((part, index) => {
+      if (index % 2 === 1) {
+        return (
+          <span key={index} className="italic text-[#db775b]">
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
+  // Smooth scroll handler
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    if (href?.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <section id="home" className="space-y-6 scroll-mt-20">
 
       <div className="w-16 h-16 rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700">
         <Image
           src="https://res.cloudinary.com/dbkkmdery/image/upload/v1768062121/IMG_20260110_214814_axjlpe.jpg"
-          alt="Vaibhav profile photo"
+          alt={`${personalInfo.name} profile photo`}
           width={64}
           height={64}
           className="object-cover"
         />
       </div>
 
-
       <div className="space-y-4">
         <h1 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100">
           Hey, I'm <span className="text-[#db775b] dark:text-[#db775b] underline">{personalInfo.name}</span>!
         </h1>
 
-        <div className="space-y-2 text-neutral-700 dark:text-neutral-300 font-geistMono">
-          <p className="flex items-start gap-2">
-            <span>{personalInfo.title} based in {personalInfo.location}</span>
+        <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
+          <p className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
+            <MapPin className="w-4 h-4" />
+            <span>{personalInfo.location}</span>
           </p>
-          <p>
-            {personalInfo.tagline}
+
+          <p className="text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">
+            {renderTagline(personalInfo.tagline)}
           </p>
-          <p>
+
+          <p className="leading-relaxed opacity-90 italic">
             {personalInfo.description}
           </p>
         </div>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <Button variant="primary" icon={<Calendar className="w-4 h-4" />} href="https://cal.com/yourusername">
-            Book a call
-          </Button>
-          <Button variant="secondary" icon={<Mail className="w-4 h-4" />} href={`mailto:${personalInfo.email}`}>
-            Send an email
-          </Button>
+          {/* Render only the selected social links */}
+          {heroSocials.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+            >
+              {typeof link.icon === 'string' ? (
+                <span className="text-base">{link.icon}</span>
+              ) : (
+                link.icon
+              )}
+              <span className="font-medium">{link.name}</span>
+            </a>
+          ))}
+
+          {/* Get in Touch Button with Smooth Scroll */}
+          <a
+            href="#contact" 
+            onClick={handleScroll}
+            className="flex items-center gap-2 px-4 py-2 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-lg text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
+          >
+            <span className="font-medium">Get in touch</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
-        <div className="flex items-center gap-2 pt-2">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-sm text-neutral-600 dark:text-neutral-400">{personalInfo.availability}</span>
-        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { personalInfo } from '@/data/personal';
 
 export function Contact() {
     return (
-        <section id="contact" className="space-y-5 scroll-mt-20">
+        <section className="space-y-5 scroll-mt-20">
             <div className="space-y-2">
                 <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">GET IN TOUCH</h2>
                 <div className="space-y-1 font-mono text-sm text-neutral-700 dark:text-neutral-300">
@@ -16,12 +16,6 @@ export function Contact() {
                             {personalInfo.email}
                         </a>
 
-                    </p>
-                    <p>
-                        Or book a call on{' '}
-                        <a href="https://cal.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-[#db775b] dark:text-[#db775b] hover:underline">
-                            Cal.com
-                        </a>
                     </p>
                 </div>
             </div>

@@ -86,7 +86,7 @@ export function Navbar() {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <span className="text-[#db775b] dark:text-[#db775b] font-bold text-lg">//</span>
-            <span className="font-bold text-neutral-900 dark:text-neutral-100">VM</span>
+            <span className="font-bold text-neutral-900 dark:text-neutral-100">vaibhav.dev</span>
           </button>
 
           <div className="hidden md:flex items-center gap-1">

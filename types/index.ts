@@ -4,7 +4,6 @@ export interface PersonalInfo {
   location: string;
   tagline: string;
   description: string;
-  availability: string;
   email: string;
   github: string;
   linkedin: string;
@@ -48,7 +47,6 @@ export interface NavItem {
 
 export interface About {
   summary: string;
-  keyPoints: string[];
 }
 
 export interface Education {
