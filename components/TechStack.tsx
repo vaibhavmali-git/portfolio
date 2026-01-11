@@ -1,0 +1,22 @@
+import React from 'react';
+import { techStack } from '@/data/techStack';
+import { TechPill } from './ui/TechPill';
+
+export function TechStack() {
+  return (
+    <section id="tech-stack" className="space-y-5 scroll-mt-20">
+      <div className="space-y-2">
+        <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">TECH STACK</h2>
+        <p className="text-neutral-700 dark:text-neutral-300 font-mono text-sm">
+          The tech stack I use for my personal and client work:
+        </p>
+      </div>
+      
+      <div className="flex flex-wrap gap-2">
+        {techStack.map((tech) => (
+          <TechPill key={tech.name} name={tech.name} icon={tech.icon} />
+        ))}
+      </div>
+    </section>
+  );
+}
