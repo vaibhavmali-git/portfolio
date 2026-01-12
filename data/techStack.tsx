@@ -1,24 +1,21 @@
 import { TechStackItem } from '@/types';
 
-// Helper to render the images consistently
 const TechIcon = ({ src, alt, className = "" }: { src: string, alt: string, className?: string }) => (
   <img 
     src={src} 
     alt={alt} 
-    className={`w-4.5 h-4.5 object-contain ${className}`} // Fixed size to match the clean look
+    className={`w-3.5 h-3.5 object-contain ${className}`} 
     loading="lazy"
   />
 );
 
 export const techStack: TechStackItem[] = [
-  // Frontend
   { 
     name: "React", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /> 
   },
   { 
     name: "Next.js", 
-    // Added dark:invert so the black logo turns white in dark mode
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="dark:invert" /> 
   },
   { 
@@ -46,14 +43,13 @@ export const techStack: TechStackItem[] = [
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /> 
   },
 
-  // Backend & Database
+
   { 
     name: "Node.js", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /> 
   },
   { 
     name: "Express.js", 
-    // Invert for dark mode visibility
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" className="dark:invert" /> 
   },
   { 
@@ -73,7 +69,7 @@ export const techStack: TechStackItem[] = [
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" /> 
   },
 
-  // Tools
+
   { 
     name: "Docker", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /> 

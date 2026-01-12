@@ -22,9 +22,9 @@ export interface Experience {
 export interface Project {
   id: number;
   name: string;
-  status: 'Active' | 'Production' | 'Sold';
   description: string;
   tech: string;
+  thumbnail: string;
   githubUrl?: string;
   liveUrl?: string;
 }

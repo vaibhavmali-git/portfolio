@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
    images: {
+      domains: ['images.unsplash.com'],
     remotePatterns: [
       {
         protocol: "https",
@@ -11,6 +12,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  
 };
 
 export default nextConfig;

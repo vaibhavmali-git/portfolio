@@ -3,11 +3,17 @@
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { Geist_Mono } from "next/font/google";
+import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export default function RootLayout({
@@ -36,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {isMounted && children}
       </body>

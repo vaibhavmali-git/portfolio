@@ -18,7 +18,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           <div>
             <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{experience.role}</h3>
             <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400 mt-1">
-              <Briefcase className="w-4 h-4" />
+        
               <span className="font-medium">{experience.company}</span>
               <span className="text-neutral-400 dark:text-neutral-600">•</span>
               <span className="text-sm">{experience.location}</span>
