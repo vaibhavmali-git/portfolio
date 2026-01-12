@@ -27,12 +27,12 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           <TypeBadge type={experience.type} />
         </div>
         
-        <p className="text-sm text-neutral-500 dark:text-neutral-500 font-mono">{experience.period}</p>
+        <p className="text-sm text-neutral-500 dark:text-neutral-500  ">{experience.period}</p>
         
         <ul className="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
           {experience.highlights.map((highlight, idx) => (
             <li key={idx} className="flex gap-2">
-              <span className="text-[#db775b] dark:text-[#db775b] mt-1.5 flex-shrink-0">▸</span>
+              <span className="text-[#db775b] dark:text-[#db775b] flex-shrink-0">•</span>
               <span>{highlight}</span>
             </li>
           ))}

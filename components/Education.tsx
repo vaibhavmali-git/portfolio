@@ -7,7 +7,7 @@ export function Education() {
         <section id="education" className="space-y-6 scroll-mt-20">
             <div className="space-y-2">
                 <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">EDUCATION</h2>
-                <p className="text-neutral-700 dark:text-neutral-300 font-mono text-sm">
+                <p className="text-neutral-700 dark:text-neutral-300   text-sm">
                     My educational background and qualifications:
                 </p>
             </div>
@@ -25,7 +25,7 @@ export function Education() {
 
                         <div className="ml-8 space-y-3">
                             <div className="flex items-center justify-between">
-                                <p className="text-sm text-neutral-500 dark:text-neutral-500 font-mono">{edu.period}</p>
+                                <p className="text-sm text-neutral-500 dark:text-neutral-500  ">{edu.period}</p>
                                 {edu.cgpa && (
                                     <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">
                                         CGPA: {edu.cgpa}

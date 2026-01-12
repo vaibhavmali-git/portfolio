@@ -5,7 +5,7 @@ import { socialLinks } from '@/data/socialLinks';
 import { personalInfo } from '@/data/personal'; // Importing email from your personal data
 import { Copy, Check } from 'lucide-react';
 
-export function SocialLinks() {
+export function Contacts() {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopyEmail = async () => {
@@ -23,7 +23,7 @@ export function SocialLinks() {
     <section className="space-y-5"  id="contact" >
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">FIND ME ON</h2>
-        <p className="text-neutral-700 dark:text-neutral-300 font-mono text-sm">
+        <p className="text-neutral-700 dark:text-neutral-300   text-sm">
           You can find me on the following social platforms:
         </p>
       </div>
@@ -62,6 +62,7 @@ export function SocialLinks() {
               {isCopied ? 'Copied!' : 'Copy Email'}
             </span>
           </button>
+          
       </div>
     </section>
   );

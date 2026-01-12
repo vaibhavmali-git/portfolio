@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3 leading-relaxed">{project.description}</p>
       <div className="flex items-center justify-between">
-        <p className="text-xs text-neutral-500 dark:text-neutral-500 font-mono">{project.tech}</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-500  ">{project.tech}</p>
         <div className="flex gap-2">
           {project.githubUrl && project.githubUrl !== "#" && (
             <a 

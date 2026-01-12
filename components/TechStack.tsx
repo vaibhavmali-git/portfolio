@@ -4,11 +4,11 @@ import { TechPill } from './ui/TechPill';
 
 export function TechStack() {
   return (
-    <section id="tech-stack" className="space-y-5 scroll-mt-20">
+    <section id="experience" className="space-y-5 scroll-mt-20">
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">TECH STACK</h2>
-        <p className="text-neutral-700 dark:text-neutral-300 font-mono text-sm">
-          The tech stack I use for my personal and client work:
+        <p className="text-neutral-700 dark:text-neutral-300   text-sm">
+          Here are the frameworks, libraries, services and runtimes I have experience with. This is not a complete list! I'm constantly gaining new skills, and hence it can be a little bit outdated.
         </p>
       </div>
       

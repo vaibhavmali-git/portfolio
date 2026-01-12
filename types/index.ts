@@ -31,7 +31,7 @@ export interface Project {
 
 export interface TechStackItem {
   name: string;
-  icon: string;
+icon: string | React.ReactNode;
 }
 
 export interface SocialLink {

@@ -6,7 +6,6 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Experience", href: "#experience" },
-  { label: "Tech Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" }
 ];
@@ -77,10 +76,10 @@ export function Navbar() {
 
   return (
   <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 dark:bg-[#1f1f1f]/95 backdrop-blur-sm dark:shadow-neutral-800/50' : 'bg-white dark:dark:bg-[#1f1f1f]'
+      isScrolled ? 'bg-neutral-50/95 dark:bg-[#1f1f1f]/95 backdrop-blur-sm dark:shadow-neutral-800/50' : 'bg-neutral-50 dark:dark:bg-[#1f1f1f]'
     } border-b border-neutral-200 dark:border-neutral-800`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="max-w-4xl mx-auto px-4 py-4">
+        <div className="flex items-center gap-10 justify-between sm:justify-start">
           <button 
             onClick={() => scrollToSection('#home')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -96,7 +95,7 @@ export function Navbar() {
                 onClick={() => scrollToSection(item.href)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   activeSection === item.href.slice(1)
-                    ? 'bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100'
+                    ? 'bg-neutral-100 dark:bg-neutral-800 text-[#db775b] dark:text-[#db775b] italic'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50'
                 }`}
               >
@@ -104,23 +103,23 @@ export function Navbar() {
               </button>
             ))}
             
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="ml-2 p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
+            </button> */}
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5 text-neutral-700 dark:text-neutral-300" /> : <Moon className="w-5 h-5 text-neutral-700" />}
-            </button>
+            </button> */}
             
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

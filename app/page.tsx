@@ -5,7 +5,7 @@ import { Experience } from '@/components/Experience';
 import { TechStack } from '@/components/TechStack';
 import { Projects } from '@/components/Projects';
 import { Education } from '@/components/Education';
-import { SocialLinks } from '@/components/SocialLinks';
+import { Contacts } from '@/components/Contacts';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -22,7 +22,7 @@ export default function Home() {
       
         <Projects />
         <Education />
-        <SocialLinks />
+        <Contacts />
         <Contact />
       </main>
 

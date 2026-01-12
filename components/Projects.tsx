@@ -7,7 +7,7 @@ export function Projects() {
     <section id="projects" className="space-y-5 scroll-mt-20">
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">PROJECTS</h2>
-        <p className="text-neutral-700 dark:text-neutral-300 font-mono text-sm">
+        <p className="text-neutral-700 dark:text-neutral-300   text-sm">
           These are my personal projects, both past and ongoing:
         </p>
       </div>
