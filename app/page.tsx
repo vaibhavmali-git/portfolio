@@ -12,35 +12,53 @@ import Divider from "@/components/ui/Divider"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F2F0E3] dark:bg-[#1F1F1F] transition-colors duration-300">
-      <Navbar />
+    <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#1F1F1F] transition-colors duration-300">
 
-      <main className="max-w-204 mx-auto px-6 pt-20 pb-14 space-y-10">
-        <Hero />
-        <Divider />
+      {/* NOISE OVERLAY */}
+      <div
+        className="
+          pointer-events-none
+          absolute inset-0
+          z-0
+          bg-repeat
+          opacity-[0.7]
+          invert
+          dark:invert-1
+          contrast-125
+          dark:opacity-[0.4]
+        "
+        style={{
+          backgroundImage: "url('/images/textures/noise-light.png')",
+          backgroundSize: "140px 140px",
+        }}
+      />
 
-        <About />
-        <Divider />
+      {/* CONTENT */}
+      <div className="relative z-10">
+        <Navbar />
 
-        <TechStack />
-        <Divider />
+        <main className="max-w-204 mx-auto px-6 pt-20 pb-14 space-y-10">
+          <Hero />
+          <Divider />
 
-        <Experience />
-        <Divider />
+          <About />
+          <Divider />
 
-        <Projects />
-        <Divider />
+          <TechStack />
+          <Divider />
 
-        {/* <Education />
-        <Divider /> */}
+          <Experience />
+          <Divider />
 
-        <Contacts />
+          <Projects />
+          <Divider />
 
-        <Contact />
-      </main>
+          <Contacts />
+          <Contact />
+        </main>
 
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }

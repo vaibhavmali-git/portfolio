@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-import { MapPin, ArrowRight } from 'lucide-react';
-import { personalInfo } from '@/data/personal';
-import { socialLinks } from '@/data/socialLinks';
+"use client";
+import React from "react";
+import { MapPin, ArrowRight } from "lucide-react";
+import { personalInfo } from "@/data/personal";
+import { socialLinks } from "@/data/socialLinks";
 import Image from "next/image";
 
 export function Hero() {
-  const heroSocials = socialLinks.filter(link => 
-    ["GitHub", "LinkedIn",].includes(link.name)
+  const heroSocials = socialLinks.filter((link) =>
+    ["GitHub", "LinkedIn"].includes(link.name),
   );
 
   const renderTagline = (text: string) => {
-    const parts = text.split('*');
+    const parts = text.split("*");
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return (
@@ -26,11 +26,11 @@ export function Hero() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    if (href?.startsWith('#')) {
+    const href = e.currentTarget.getAttribute("href");
+    if (href?.startsWith("#")) {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -48,13 +48,13 @@ export function Hero() {
       </div>
 
       <div className="space-y-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
-          Hey, I'm <span className="text-[#db775b] dark:text-[#db775b] underline">{personalInfo.name}</span>!
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
+          Hey, I'm <span className="font-serif">{personalInfo.name}</span>!
         </h1>
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
-          <p className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
-            <MapPin className="w-4 h-4" />
+          <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400">
+            <MapPin className="w-4 h-4 -mt-0.5" />
             <span>{personalInfo.location}</span>
           </p>
 
@@ -68,16 +68,15 @@ export function Hero() {
         </div>
 
         <div className="flex flex-wrap gap-3 pt-2">
-       
           {heroSocials.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+              className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300  dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
             >
-              {typeof link.icon === 'string' ? (
+              {typeof link.icon === "string" ? (
                 <span className="text-base">{link.icon}</span>
               ) : (
                 link.icon
@@ -86,9 +85,8 @@ export function Hero() {
             </a>
           ))}
 
-      
           <a
-            href="#contact" 
+            href="#contact"
             onClick={handleScroll}
             className="flex items-center gap-2 px-4 py-2 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-lg text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
           >

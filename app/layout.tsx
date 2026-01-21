@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { Geist_Mono } from "next/font/google";
 import { DM_Serif_Display, Inter } from "next/font/google";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
 
 const geistMono = Geist_Mono({
@@ -15,6 +16,13 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 
 export default function RootLayout({
   children,
@@ -42,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} ${newsreader.variable} antialiased`}
       >
         {isMounted && children}
       </body>
