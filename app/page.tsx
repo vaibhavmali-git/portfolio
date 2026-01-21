@@ -1,19 +1,18 @@
-import { Navbar } from '@/components/Navbar';
-import { Hero } from '@/components/Hero';
-import { About } from '@/components/About';
-import { Experience } from '@/components/Experience';
-import { TechStack } from '@/components/TechStack';
-import { Projects } from '@/components/Projects';
-import { Education } from '@/components/Education';
-import { Contacts } from '@/components/Contacts';
-import { Contact } from '@/components/Contact';
-import { Footer } from '@/components/Footer';
-import Divider from "@/components/ui/Divider"
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Experience } from "@/components/Experience";
+import { TechStack } from "@/components/TechStack";
+import { Projects } from "@/components/Projects";
+import { Education } from "@/components/Education";
+import { Contacts } from "@/components/Contacts";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import Divider from "@/components/ui/Divider";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#1F1F1F] transition-colors duration-300">
-
+    <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#151515] transition-colors duration-300">
       {/* NOISE OVERLAY */}
       <div
         className="
@@ -25,11 +24,11 @@ export default function Home() {
           invert
           dark:invert-1
           contrast-125
-          dark:opacity-[0.4]
+          dark:opacity-[0.5]
         "
         style={{
           backgroundImage: "url('/images/textures/noise-light.png')",
-          backgroundSize: "140px 140px",
+          backgroundSize: "150px 150px",
         }}
       />
 
@@ -41,9 +40,6 @@ export default function Home() {
           <Hero />
           <Divider />
 
-          <About />
-          <Divider />
-
           <TechStack />
           <Divider />
 
@@ -52,6 +48,9 @@ export default function Home() {
 
           <Projects />
           <Divider />
+
+          <About />
+          {/* <Divider /> */}
 
           <Contacts />
           <Contact />

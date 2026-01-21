@@ -2,5 +2,5 @@ import { About } from '@/types';
 
 export const about: About = {
   summary:
-    "I’m a *Software Developer* with a deep specialization in React and TypeScript, currently shipping production code at *QuadB Technologies*. My background spans the full stack. I build clean, accessible UIs, but I’m equally comfortable diving into Node.js backends, optimizing SQL queries, or managing OAuth flows.\n\nMy work ranges from shipping scalable features to fixing critical auth and integration issues in production. I care about writing code that’s easy to reason about, reliable under load, and pleasant for teams to maintain."
+    "I work on production web applications that need to be *reliable, readable,* and easy to evolve. My day-to-day work involves building user-facing features, integrating APIs, and improving performance and stability across the stack.\n\nI’ve handled everything from frontend architecture and state management to fixing backend integration issues, auth flows, and database inefficiencies. Outside of work, I spend time on *photography* and share some of my photos on Instagram."
 };

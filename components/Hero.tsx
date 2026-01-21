@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function Hero() {
   const heroSocials = socialLinks.filter((link) =>
-    ["GitHub", "LinkedIn"].includes(link.name),
+    ["GitHub", "LinkedIn", "X/Twitter"].includes(link.name),
   );
 
   const renderTagline = (text: string) => {
@@ -15,7 +15,7 @@ export function Hero() {
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return (
-          <span key={index} className="italic text-[#db775b]">
+          <span key={index} className="text-[#db775b] font-bold underline">
             {part}
           </span>
         );
@@ -62,7 +62,7 @@ export function Hero() {
             {renderTagline(personalInfo.tagline)}
           </p>
 
-          <p className="leading-relaxed opacity-90 italic text-sm">
+          <p className="leading-relaxed opacity-90">
             {personalInfo.description}
           </p>
         </div>

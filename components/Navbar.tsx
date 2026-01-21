@@ -84,8 +84,8 @@ export function Navbar() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`px-4 py-2 text-base font-medium transition-all ${activeSection === item.href.slice(1)
-                      ? 'text-[#db775b]'
+                  className={`px-4 py-2 text-base transition-all ${activeSection === item.href.slice(1)
+                      ? 'text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer'
                       : 'text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer'
                     }`}
                 >
