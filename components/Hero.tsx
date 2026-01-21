@@ -64,7 +64,7 @@ export function Hero() {
             {renderTagline(personalInfo.tagline)}
           </p>
 
-          <p className="leading-relaxed opacity-90">
+          <p className="leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
             {personalInfo.description}
           </p>
         </div>

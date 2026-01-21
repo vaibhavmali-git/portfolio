@@ -9,7 +9,7 @@ export function Contacts() {
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
           FIND ME ON
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm">
+        <p className="text-neutral-900 dark:text-neutral-300 text-sm">
           You can find me on the following social platforms:
         </p>
       </div>

@@ -12,7 +12,7 @@ export function Projects() {
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
             PROJECTS I SHIPPED
           </h2>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm">
+          <p className="text-neutral-900 dark:text-neutral-300 text-sm">
             Production applications I've built and deployed for companies:
           </p>
         </div>
@@ -30,7 +30,7 @@ export function Projects() {
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
             PERSONAL PROJECTS
           </h2>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm">
+          <p className="text-neutral-900 dark:text-neutral-300 text-sm">
             My personal projects:
           </p>
         </div>

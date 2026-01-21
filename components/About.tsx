@@ -27,7 +27,7 @@ export function About() {
         {about.summary.split("\n\n").map((paragraph, index) => (
           <p
             key={index}
-            className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm"
+            className="text-neutral-900 dark:text-neutral-300 leading-relaxed text-sm"
           >
             {renderHighlightedText(paragraph)}
           </p>
