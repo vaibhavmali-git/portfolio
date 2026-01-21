@@ -48,8 +48,10 @@ export function Hero() {
       </div>
 
       <div className="space-y-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
-          Hey, I'm <span className="font-serif">{personalInfo.name}</span>!
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
+          Hey, I'm <span className="font-serif">{personalInfo.name}.</span>
+        
+          <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
         </h1>
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
