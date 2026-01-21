@@ -7,11 +7,9 @@ export function Contacts() {
     <section className="space-y-5" id="contact">
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
-          FIND ME ON
+          GET IN TOUCH
         </h2>
-        <p className="text-neutral-900 dark:text-neutral-300 text-sm">
-          You can find me on the following social platforms:
-        </p>
+      
       </div>
 
       <div className="flex flex-wrap gap-3">

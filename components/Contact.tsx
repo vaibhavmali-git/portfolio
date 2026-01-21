@@ -5,8 +5,8 @@ export function Contact() {
     return (
         <section className="space-y-5 scroll-mt-20">
             <div className="space-y-2">
-                <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">GET IN TOUCH</h2>
-                <div className="space-y-1   text-sm text-neutral-900 dark:text-neutral-300">
+               
+                <div className="space-y-1   text-sm text-neutral-900 dark:text-neutral-300 -mt-6">
                     <p>
                         You can reach me anytime at{' '}
                         <a

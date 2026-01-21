@@ -36,7 +36,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
 
-        <main className="max-w-204 mx-auto px-6 pt-20 pb-14 space-y-10">
+        <main className="max-w-204 mx-auto px-6 pt-20 pb-10 space-y-10">
           <Hero />
           <Divider />
 
