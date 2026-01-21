@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function Hero() {
   const heroSocials = socialLinks.filter(link => 
-    ["GitHub", "LinkedIn", "X/Twitter"].includes(link.name)
+    ["GitHub", "LinkedIn",].includes(link.name)
   );
 
   const renderTagline = (text: string) => {
@@ -36,7 +36,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="space-y-6 scroll-mt-20">
+    <section id="home" className="space-y-6 scroll-mt-20 mt-4">
       <div className="w-16 h-16 rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700">
         <Image
           src="https://res.cloudinary.com/dbkkmdery/image/upload/v1768062121/IMG_20260110_214814_axjlpe.jpg"
@@ -75,14 +75,14 @@ export function Hero() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+              className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
             >
               {typeof link.icon === 'string' ? (
                 <span className="text-base">{link.icon}</span>
               ) : (
                 link.icon
               )}
-              {/* <span className="font-medium">{link.name}</span> */}
+              <span className="hidden sm:flex font-medium">{link.name}</span>
             </a>
           ))}
 
@@ -90,7 +90,7 @@ export function Hero() {
           <a
             href="#contact" 
             onClick={handleScroll}
-            className="flex items-center gap-2 px-4 py-2 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-md text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-lg text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
           >
             <span className="font-medium">Get in touch</span>
             <ArrowRight className="w-4 h-4" />

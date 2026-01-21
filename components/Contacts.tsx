@@ -35,7 +35,7 @@ export function Contacts() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+            className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
           >
             {typeof link.icon === 'string' ? (
               <span className="text-base">{link.icon}</span>
@@ -48,9 +48,9 @@ export function Contacts() {
         ))}
 
        
-        <button
+        {/* <button
           onClick={handleCopyEmail}
-          className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all cursor-pointer"
+          className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all cursor-pointer"
           aria-label="Copy email address"
         >
           {isCopied ? (
@@ -61,7 +61,7 @@ export function Contacts() {
           <span className="font-medium">
             {isCopied ? 'Copied!' : 'Copy Email'}
           </span>
-        </button>
+        </button> */}
 
       </div>
     </section>

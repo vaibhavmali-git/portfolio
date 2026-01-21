@@ -9,8 +9,8 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="group bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-md dark:hover:shadow-neutral-900/50 transition-all flex flex-col h-full">
-
-      {/* <div className="relative aspect-video w-full overflow-hidden border-b border-neutral-100 dark:border-neutral-700">
+{/* 
+      <div className="relative aspect-video w-full overflow-hidden border-b border-neutral-100 dark:border-neutral-700">
         <Image
           src={project.thumbnail}
           alt={project.name}
@@ -31,7 +31,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 bg-[#f0eee6] dark:bg-[#1f1e1d] border border-neutral-200 dark:border-neutral-700 rounded-md text-sm text-neutral-500 dark:text-neutral-300 hover:text-[#d97757]"
+                className="p-1 bg-[#f0eee6] dark:bg-[#1f1e1d] border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-500 dark:text-neutral-300 hover:text-[#d97757]"
                 aria-label="View on GitHub"
               >
                 <Github className="w-4 h-4" />
@@ -42,7 +42,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 bg-[#f0eee6] dark:bg-[#1f1e1d] border border-neutral-200 dark:border-neutral-700 rounded-md text-sm text-neutral-500 dark:text-neutral-300 hover:text-[#d97757]"
+                className="p-1 bg-[#f0eee6] dark:bg-[#1f1e1d] border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm text-neutral-500 dark:text-neutral-300 hover:text-[#d97757]"
                 aria-label="View live demo"
               >
                 <ExternalLink className="w-4 h-4" />

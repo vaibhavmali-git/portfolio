@@ -12,10 +12,10 @@ import Divider from "@/components/ui/Divider"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#faf9f5] dark:bg-[#1f1f1f] transition-colors duration-300">
+    <div className="min-h-screen bg-[#F2F0E3] dark:bg-[#1F1F1F] transition-colors duration-300">
       <Navbar />
 
-      <main className="max-w-4xl mx-auto px-6 pt-20 pb-14 space-y-10">
+      <main className="max-w-204 mx-auto px-6 pt-20 pb-14 space-y-10">
         <Hero />
         <Divider />
 
@@ -31,8 +31,8 @@ export default function Home() {
         <Projects />
         <Divider />
 
-        <Education />
-        <Divider />
+        {/* <Education />
+        <Divider /> */}
 
         <Contacts />
 

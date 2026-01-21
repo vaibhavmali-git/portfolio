@@ -7,7 +7,7 @@ interface TechPillProps {
 
 export function TechPill({ name, icon }: TechPillProps) {
   return (
-    <div className="flex items-center gap-3 px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md cursor-default group">
+    <div className="flex items-center gap-3 px-4 py-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg cursor-default group">
       <span className="flex items-center justify-center [&>svg]:w-4 [&>svg]:h-4 [&>svg]:transition-transform group-hover:[&>svg]:scale-110">
         {icon}
       </span>
