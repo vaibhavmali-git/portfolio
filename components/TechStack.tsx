@@ -8,7 +8,7 @@ export function TechStack() {
       <div className="space-y-2">
         {/* <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">TECH STACK</h2> */}
         <p className="text-neutral-700 dark:text-neutral-300   text-sm">
-          Here are the frameworks, libraries, services and runtimes I have experience with. This is not a complete list! I'm constantly gaining new skills, and hence it can be a little bit outdated.
+          Here are the tools and technologies I work with.
         </p>
       </div>
       

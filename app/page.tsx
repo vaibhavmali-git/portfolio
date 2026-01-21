@@ -20,7 +20,7 @@ export default function Home() {
           absolute inset-0
           z-0
           bg-repeat
-          opacity-[0.8]
+          opacity-[0.7]
           invert
           dark:invert-1
           contrast-125
