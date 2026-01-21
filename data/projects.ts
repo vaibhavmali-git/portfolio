@@ -6,7 +6,7 @@ export const shippedProjects: Project[] = [
     name: "DFinance",
     description:
       "Decentralized lending and borrowing platform built on Internet Computer Protocol (ICP), featuring AMM-based DEX, token issuance, and liquidity farming with a unique buy & burn mechanism.",
-    tech: "React, TypeScript, Internet Computer, Rust, Web3",
+    tech: "React, Internet Computer, Rust, Web3",
     liveUrl: "https://bn2g3-lqaaa-aaaaj-azykq-cai.icp0.io",
     thumbnail:
       "https://res.cloudinary.com/dbkkmdery/image/upload/v1768193539/Screenshot_2026-01-12_at_10.20.25_AM_wga2lr.png",
@@ -16,7 +16,7 @@ export const shippedProjects: Project[] = [
     name: "Clans App",
     description:
       "Mobile community platform featuring campaign flows, wallet onboarding, and leaderboards. Led frontend development using React Native & TypeScript and resolved critical OAuth token refresh issues.",
-    tech: "React Native, Expo, TypeScript, Redux Toolkit",
+    tech: "React Native, Expo, TypeScript, Node.js, PostgreSQL, Redux Toolkit",
     thumbnail:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
   },
