@@ -41,7 +41,7 @@ export function Navbar() {
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.slice(1));
     if (element) {
-      const offset = 80;
+      const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -52,7 +52,6 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
 
-      {/* Navbar Background with Wavy Bottom Cut */}
       <div
         className={`relative w-full transition-colors duration-300 ${isScrolled
             ? 'bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-sm '

@@ -42,7 +42,7 @@ export function Projects() {
         </div>
       </div>
 
-      <div className="flex justify-center pt-4">
+      <div className="flex justify-center">
         <a
           href="https://github.com/vaibhavmali-git"
           target="_blank"

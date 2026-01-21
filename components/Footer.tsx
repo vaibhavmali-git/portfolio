@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="relative">
       <div
-        className="bg-[#FBFAF4] dark:bg-neutral-900 transition-colors duration-300"
+        className="bg-[#FBFAF4] dark:bg-[#1F1F1F] transition-colors duration-300"
         style={{
           maskImage: `${MASK_SVG_TOP}, linear-gradient(black, black)`,
           WebkitMaskImage: `${MASK_SVG_TOP}, linear-gradient(black, black)`,
@@ -34,7 +34,7 @@ export function Footer() {
       </div>
 
       <div
-        className="absolute top-0 left-0 right-0 h-2.5 w-full pointer-events-none z-20 bg-neutral-400/70 dark:bg-neutral-800 transition-colors duration-300"
+        className="absolute top-0 left-0 right-0 h-2.5 w-full pointer-events-none z-20 bg-neutral-400/70 dark:bg-neutral-700 transition-colors duration-300"
         style={{
           maskImage: MASK_WIGGLE_LINE,
           WebkitMaskImage: MASK_WIGGLE_LINE,

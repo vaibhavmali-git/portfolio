@@ -12,7 +12,7 @@ import Divider from "@/components/ui/Divider";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#151515] transition-colors duration-300">
+    <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#191919] transition-colors duration-300">
       {/* NOISE OVERLAY */}
       <div
         className="
@@ -20,7 +20,7 @@ export default function Home() {
           absolute inset-0
           z-0
           bg-repeat
-          opacity-[0.7]
+          opacity-[0.8]
           invert
           dark:invert-1
           contrast-125
@@ -28,7 +28,7 @@ export default function Home() {
         "
         style={{
           backgroundImage: "url('/images/textures/noise-light.png')",
-          backgroundSize: "150px 150px",
+          backgroundSize: "140px 140px",
         }}
       />
 
