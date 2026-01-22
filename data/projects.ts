@@ -1,12 +1,11 @@
 import { Project } from "@/types";
-
 export const shippedProjects: Project[] = [
   {
     id: 1,
     name: "DFinance",
     description:
-      "Decentralized lending and borrowing platform built on Internet Computer Protocol (ICP), featuring AMM-based DEX, token issuance, and liquidity farming with a unique buy & burn mechanism.",
-    tech: "React, Internet Computer, Rust, Web3",
+      "A decentralized lending and borrowing platform built on the Internet Computer Protocol (ICP). I owned the frontend development, handled Web3 integrations, token flows, and built the DEX UI to display liquidity and farming data in real time.",
+    tech: "React, Internet Computer (ICP), Rust, Web3.js, Tailwind CSS",
     liveUrl: "https://bn2g3-lqaaa-aaaaj-azykq-cai.icp0.io",
     thumbnail:
       "https://res.cloudinary.com/dbkkmdery/image/upload/v1768193539/Screenshot_2026-01-12_at_10.20.25_AM_wga2lr.png",
@@ -15,7 +14,7 @@ export const shippedProjects: Project[] = [
     id: 2,
     name: "Clans App",
     description:
-      "Mobile community platform featuring campaign flows, wallet onboarding, and leaderboards. Led frontend development using React Native & TypeScript and resolved critical OAuth token refresh issues.",
+      "A mobile-first community app for campaign management and user onboarding. I worked mainly on the React Native frontend and also helped on the backend to fix OAuth token refresh issues and improve leaderboard API performance.",
     tech: "React Native, Expo, TypeScript, Node.js, PostgreSQL, Redux Toolkit",
     thumbnail:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
@@ -24,13 +23,14 @@ export const shippedProjects: Project[] = [
     id: 3,
     name: "BlockseBlock",
     description:
-      "Global hackathon platform connecting 100k+ developers. Comprehensive ecosystem with event management, judging system, project submissions, and community features for Web3 hackathons.",
-    tech: "React, TypeScript, Node.js, MongoDB, Web3",
-    liveUrl: "https://blockseblock.com",
+      "A Web3 hackathon platform used by developers worldwide. I contributed to the frontend by building event management flows, project submissions, and the judging dashboard.",
+    tech: "React, TypeScript, Node.js, MongoDB",
+    liveUrl: "https://learn.blockseblock.com/",
     thumbnail:
       "https://res.cloudinary.com/dbkkmdery/image/upload/v1768194434/blockseblock_yx9iur.png",
   },
 ];
+
 
 export const personalProjects: Project[] = [
   {

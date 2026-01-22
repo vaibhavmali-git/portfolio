@@ -12,8 +12,11 @@ export function Projects() {
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
             PROJECTS I SHIPPED
           </h2>
-          <p className="text-neutral-900 dark:text-neutral-300 text-sm">
-            Production applications I've built and deployed for companies:
+          <p className="text-neutral-900 dark:text-neutral-300 text-[13px] sm:text-sm">
+            Production applications I've built and maintained at{" "}
+            <span className="font-medium text-neutral-900 dark:text-neutral-100 underline underline-offset-4 decoration-[#db775b]/30">
+              QuadB Technologies
+            </span>:
           </p>
         </div>
 

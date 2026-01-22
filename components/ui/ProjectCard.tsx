@@ -9,30 +9,37 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const techStack = project.tech.split(",").map((tech) => tech.trim());
 
+  // Automatically split the description into sentences for a cleaner list view
+  const descriptionPoints = project.description
+    .split(". ")
+    .filter((point) => point.trim().length > 0)
+    .map((point) => (point.endsWith(".") ? point : `${point}.`));
+
   return (
-    <div className="group bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-[rgb(50,50,50)] rounded-[1rem] overflow-hidden hover:shadow-md dark:hover:shadow-neutral-900/50 transition-all flex flex-col h-full">
-      <div className="px-4 py-5 pt-3 sm:px-5 sm:py-6 sm:pt-4 flex flex-col flex-grow">
+    <div className="group bg-white dark:bg-[#262626] border border-neutral-200 dark:border-[rgb(48,48,48)] rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-neutral-900/30 transition-all duration-300 flex flex-col h-full">
+      
+      {/* Increased padding for better breathing room */}
+      <div className="px-4.5 py-5 pt-4 sm:px-5 sm:py-6 sm:pt-4.5 flex flex-col flex-grow">
+        
+        {/* Header Section */}
         <div className="flex flex-col gap-3 sm:gap-4 mb-3">
-          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-            <h3 className="font-semibold text-base sm:text-lg text-neutral-900 dark:text-neutral-100">
+          <div className="flex items-start justify-between gap-4">
+            <h3 className="font-bold text-lg leading-tight text-neutral-900 dark:text-neutral-100">
               {project.name}
             </h3>
 
-            <div className="flex gap-2 shrink-0 sm:-mr-1">
+            {/* Action Buttons */}
+            <div className="flex gap-2 shrink-0">
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-2 py-1 sm:px-2.5 sm:py-1.5 bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-lg text-[10px] sm:text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all"
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-xs font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all"
                   aria-label="View on GitHub"
                 >
-                  <GithubLogo
-                    size={14}
-                    weight="regular"
-                    className="sm:w-[15px] sm:h-[15px]"
-                  />
-                  <span>GitHub</span>
+                  <GithubLogo size={15} weight="bold" />
+                  <span className="hidden sm:inline">Code</span>
                 </a>
               )}
               {project.liveUrl && (
@@ -40,14 +47,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-2 py-1 sm:px-2.5 sm:py-1.5 bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 rounded-lg text-[10px] sm:text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all"
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-xs font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all"
                   aria-label="View live demo"
                 >
-                  <ArrowSquareOut
-                    size={14}
-                    weight="regular"
-                    className="sm:w-[15px] sm:h-[15px]"
-                  />
+                  <ArrowSquareOut size={15} weight="bold" />
                   <span>Live</span>
                 </a>
               )}
@@ -55,9 +58,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
 
-        <p className="text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
-          {project.description}
-        </p>
+        {/* Description: Rendered as a clean list instead of a block */}
+        <div className="mb-6 flex-grow">
+          <ul className="space-y-2.5">
+            {descriptionPoints.map((point, index) => (
+              <li key={index} className="flex gap-2.5 text-[13px] sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                <span className="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-neutral-300 dark:bg-neutral-600" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="mt-auto pt-4 border-t border-neutral-100 dark:border-neutral-700/50">
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
