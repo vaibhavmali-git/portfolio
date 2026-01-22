@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { List, X, SunHorizon, MoonStars } from "@phosphor-icons/react";
+import { List, XCircle, SunHorizon, MoonStars } from "@phosphor-icons/react";
 
 const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 0 H20 V5 Q15 9 10 5 T0 5 V0 Z" fill="black"/></svg>')`;
 
@@ -109,7 +109,7 @@ export function Navbar() {
               aria-label="Toggle navigation menu"
             >
               {isMenuOpen ? (
-                <X size={21} weight="regular" />
+                <XCircle size={21} weight="regular" />
               ) : (
                 <List size={21} weight="regular" />
               )}

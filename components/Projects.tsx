@@ -1,5 +1,5 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+"use client";
+import { ArrowCircleUpRight } from "@phosphor-icons/react";
 import { shippedProjects, personalProjects } from "@/data/projects";
 import { ProjectCard } from "./ui/ProjectCard";
 
@@ -50,7 +50,7 @@ export function Projects() {
           className="group flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors underline"
         >
           <span>View more on GitHub</span>
-          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <ArrowCircleUpRight size={17} weight="regular" />
         </a>
       </div>
     </section>

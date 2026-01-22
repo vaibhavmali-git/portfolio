@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPinLine, ArrowCircleDownRight } from "@phosphor-icons/react";
 import { personalInfo } from "@/data/personal";
 import { socialLinks } from "@/data/socialLinks";
 import Image from "next/image";
@@ -48,15 +48,15 @@ export function Hero() {
       </div>
 
       <div className="space-y-4">
-        <h1 className="text-3xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
+        <h1 className="text-2xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
           Hey, I'm <span className="font-serif">{personalInfo.name}.</span>
         
           <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
         </h1>
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
-          <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400">
-            <MapPin className="w-4 h-4 -mt-0.5" />
+          <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
+            <MapPinLine size={18} weight="regular" className="-mt-0.5" />
             <span>{personalInfo.location}</span>
           </p>
 
@@ -64,7 +64,7 @@ export function Hero() {
             {renderTagline(personalInfo.tagline)}
           </p>
 
-          <p className="leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
+          <p className=" text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
             {personalInfo.description}
           </p>
         </div>
@@ -93,7 +93,7 @@ export function Hero() {
             className="flex items-center justify-center gap-2 px-4 h-9 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-lg text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
           >
             <span className="font-medium">Get in touch</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowCircleDownRight size={17} weight="regular" />
           </a>
         </div>
       </div>
