@@ -32,7 +32,7 @@ export function Contacts() {
                   {link.icon}
                 </span>
               )}
-              <span className="font-medium">{link.name}</span>
+              <span className="font-medium text-xs sm:text-sm">{link.name}</span>
             </a>
           ))}
       </div>

@@ -16,7 +16,7 @@ export function TypeBadge({ type }: TypeBadgeProps) {
 
   return (
     <span
-      className={`inline-flex items-center px-3 py-1 text-xs font-medium rounded-[0.4rem] border mt-1 ${styles[type]}`}
+      className={`inline-flex items-center px-3 py-1 text-[10px] sm:text-[11px] font-medium rounded-[0.5rem] border mt-1 ${styles[type]}`}
     >
       {type}
     </span>

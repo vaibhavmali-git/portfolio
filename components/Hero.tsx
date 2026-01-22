@@ -50,7 +50,6 @@ export function Hero() {
       <div className="space-y-4">
         <h1 className="text-3xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.5px]">
           Hey, I'm <span className="font-serif">{personalInfo.name}.</span>
-        
           <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
         </h1>
 
@@ -64,36 +63,34 @@ export function Hero() {
             {renderTagline(personalInfo.tagline)}
           </p>
 
-          <p className=" text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
             {personalInfo.description}
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 pt-2">
+        <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
           {heroSocials.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 h-8.5 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-sm text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+              className="flex items-center justify-center w-8.5 h-8.5 sm:w-10 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all shrink-0"
+              aria-label={link.name}
             >
-              {typeof link.icon === "string" ? (
-                <span className="text-base">{link.icon}</span>
-              ) : (
-                link.icon
-              )}
-              <span className="hidden sm:flex font-medium">{link.name}</span>
+              <span className="shrink-0 scale-90 sm:scale-100">
+                {link.icon}
+              </span>
             </a>
           ))}
 
           <a
             href="#contact"
             onClick={handleScroll}
-            className="flex items-center justify-center gap-2 px-3 h-9.5 rounded-[0.55rem] bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa]  text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
+            className="flex items-center justify-center gap-2 px-3 sm:px-4 h-8.5 sm:h-10 rounded-[0.55rem] bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer shrink-0"
           >
-            <span className="font-medium">Let’s talk</span>
-            <ArrowCircleDownRight size={17} weight="regular" />
+            <span className="font-medium text-xs sm:text-sm">Let’s talk</span>
+            <ArrowCircleDownRight size={18} weight="regular" />
           </a>
         </div>
       </div>
