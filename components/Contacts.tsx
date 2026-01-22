@@ -1,6 +1,7 @@
 "use client";
 
 import { socialLinks } from "@/data/socialLinks";
+import { personalInfo } from '@/data/personal';
 
 export function Contacts() {
   return (
@@ -9,13 +10,12 @@ export function Contacts() {
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
           GET IN TOUCH
         </h2>
-      
       </div>
 
       <div className="flex flex-wrap gap-3">
         {socialLinks
           // Filter out the Email entry before mapping
-          .filter((link) => link.name !== "Email") 
+          .filter((link) => link.name !== "Email")
           .map((link) => (
             <a
               key={link.name}
@@ -31,8 +31,21 @@ export function Contacts() {
               )}
               <span className="font-medium">{link.name}</span>
             </a>
-        ))}
+          ))}
       </div>
+
+      <div className="space-y-1   text-sm text-neutral-900 dark:text-neutral-300">
+                          <p>
+                              You can reach me anytime at{' '}
+                              <a
+                                  href={`mailto:${personalInfo.email}`}
+                                  className="text-[#db775b] dark:text-[#db775b] hover:underline"
+                              >
+                                  {personalInfo.email}
+                              </a>
+      
+                          </p>
+                      </div>
     </section>
   );
 }

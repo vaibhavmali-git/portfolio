@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { X, AlignRight } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { X, AlignRight } from "lucide-react";
 
 const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 0 H20 V5 Q15 9 10 5 T0 5 V0 Z" fill="black"/></svg>')`;
 
@@ -11,7 +11,7 @@ const navItems = [
   { label: "home", href: "#home" },
   { label: "experience", href: "#experience" },
   { label: "projects", href: "#projects" },
-  { label: "contact", href: "#contact" }
+  { label: "contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -22,8 +22,8 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
-      const sections = navItems.map(item => item.href.slice(1));
-      const current = sections.find(section => {
+      const sections = navItems.map((item) => item.href.slice(1));
+      const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -34,8 +34,8 @@ export function Navbar() {
       if (current) setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href: string) => {
@@ -44,19 +44,19 @@ export function Navbar() {
       const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-
       <div
-        className={`relative w-full transition-colors duration-300 ${isScrolled
-            ? 'bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-sm '
-            : 'bg-[#FBFAF4] dark:bg-[#1F1F1F]'
-          }`}
+        className={`relative w-full transition-colors duration-300 ${
+          isScrolled
+            ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-sm "
+            : "bg-[#FBFAF4] dark:bg-[#1F1F1F]"
+        }`}
         style={{
           maskImage: `linear-gradient(black, black), ${MASK_NAV_BODY}`,
           WebkitMaskImage: `linear-gradient(black, black), ${MASK_NAV_BODY}`,
@@ -71,11 +71,17 @@ export function Navbar() {
         <div className="relative z-10 max-w-204 mx-auto px-4 py-3 pb-5">
           <div className="flex items-center gap-7 justify-between">
             <button
-              onClick={() => scrollToSection('#home')}
+              onClick={() => scrollToSection("#home")}
               className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
             >
-              <span className="text-[#db775b] font-bold text-lg">//</span>
-              <span className="font-bold text-neutral-900 dark:text-neutral-100">VM</span>
+              <span className="font-bold text-lg font-mono">
+                <span className="text-[#db775b]">&lt;</span>
+                <span className="text-neutral-900 dark:text-neutral-100">
+                  VM{" "}
+                </span>
+                <span className="text-[#db775b]">/&gt;</span>
+              </span>
+           
             </button>
 
             <div className="hidden md:flex items-center">
@@ -83,17 +89,18 @@ export function Navbar() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`px-4 py-2 text-base transition-all ${activeSection === item.href.slice(1)
-                      ? 'text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer'
-                      : 'text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer'
-                    }`}
+                  className={`px-4 py-2 text-base transition-all ${
+                    activeSection === item.href.slice(1)
+                      ? "text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer"
+                      : "text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer"
+                  }`}
                 >
                   {item.label}
                 </button>
               ))}
             </div>
 
-           <div className="md:hidden flex items-center gap-2">
+            <div className="md:hidden flex items-center gap-2">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
@@ -115,8 +122,8 @@ export function Navbar() {
                   onClick={() => scrollToSection(item.href)}
                   className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     activeSection === item.href.slice(1)
-                      ? 'text-neutral-900 dark:text-neutral-100 bg-white/50 dark:bg-neutral-800/50'
-                      : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50'
+                      ? "text-neutral-900 dark:text-neutral-100 bg-white/50 dark:bg-neutral-800/50"
+                      : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                   }`}
                 >
                   {item.label}
@@ -132,12 +139,12 @@ export function Navbar() {
         style={{
           maskImage: MASK_WIGGLE_LINE,
           WebkitMaskImage: MASK_WIGGLE_LINE,
-          maskRepeat: 'repeat-x',
-          WebkitMaskRepeat: 'repeat-x',
-          maskPosition: 'bottom left',
-          WebkitMaskPosition: 'bottom left',
-          maskSize: '20px 10px',
-          WebkitMaskSize: '20px 10px'
+          maskRepeat: "repeat-x",
+          WebkitMaskRepeat: "repeat-x",
+          maskPosition: "bottom left",
+          WebkitMaskPosition: "bottom left",
+          maskSize: "20px 10px",
+          WebkitMaskSize: "20px 10px",
         }}
       />
     </nav>

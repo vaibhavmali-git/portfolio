@@ -6,14 +6,12 @@ import { TechStack } from "@/components/TechStack";
 import { Projects } from "@/components/Projects";
 import { Education } from "@/components/Education";
 import { Contacts } from "@/components/Contacts";
-import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import Divider from "@/components/ui/Divider";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-[#fbfaf4] dark:bg-[#191919] transition-colors duration-300">
-      {/* NOISE OVERLAY */}
       <div
         className="
           pointer-events-none
@@ -32,7 +30,6 @@ export default function Home() {
         }}
       />
 
-      {/* CONTENT */}
       <div className="relative z-10">
         <Navbar />
 
@@ -50,10 +47,8 @@ export default function Home() {
           <Divider />
 
           <About />
-          {/* <Divider /> */}
 
           <Contacts />
-          <Contact />
         </main>
 
         <Footer />
