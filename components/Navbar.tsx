@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, AlignRight } from "lucide-react";
+import { useTheme } from "next-themes";
+import { List, X, SunHorizon, MoonStars } from "@phosphor-icons/react";
 
 const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 0 H20 V5 Q15 9 10 5 T0 5 V0 Z" fill="black"/></svg>')`;
 
@@ -17,7 +18,13 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,16 +52,20 @@ export function Navbar() {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+      setIsMenuOpen(false);
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div
-        className={`relative w-full transition-colors duration-300 ${
+        className={`absolute inset-0 z-0 transition-colors duration-300 ${
           isScrolled
-            ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-sm "
+            ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-md"
             : "bg-[#FBFAF4] dark:bg-[#1F1F1F]"
         }`}
         style={{
@@ -67,71 +78,83 @@ export function Navbar() {
           maskRepeat: `no-repeat, repeat-x`,
           WebkitMaskRepeat: `no-repeat, repeat-x`,
         }}
-      >
-        <div className="relative z-10 max-w-204 mx-auto px-4 py-3 pb-5">
-          <div className="flex items-center gap-7 justify-between">
-            <button
-              onClick={() => scrollToSection("#home")}
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
-            >
-              <span className="font-bold text-lg font-mono">
-                <span className="text-[#db775b]">&lt;</span>
-                <span className="text-neutral-900 dark:text-neutral-100 font-serif">
-                  VM{" "}
-                </span>
-                <span className="text-[#db775b]">/&gt;</span>
+      />
+
+      <div className="relative z-10 max-w-202 mx-auto px-4 py-3 pb-5">
+        <div className="flex items-center gap-7 justify-between">
+          {/* LOGO */}
+          <button
+            onClick={() => scrollToSection("#home")}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+          >
+            <span className="font-bold text-lg font-mono">
+              <span className="text-[#db775b]">&lt;</span>
+              <span className="text-neutral-900 dark:text-neutral-100 font-serif">
+                VM{" "}
               </span>
-           
+              <span className="text-[#db775b]">/&gt;</span>
+            </span>
+          </button>
+
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`p-2 rounded-lg transition-colors border border-transparent
+                 ${
+                   isMenuOpen
+                     ? "bg-white dark:bg-neutral-800"
+                     : "hover:bg-white dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                 }
+              `}
+              aria-label="Toggle navigation menu"
+            >
+              {isMenuOpen ? (
+                <X size={21} weight="regular" />
+              ) : (
+                <List size={21} weight="regular" />
+              )}
             </button>
 
-            <div className="hidden md:flex items-center">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`px-4 py-2 text-base transition-all ${
-                    activeSection === item.href.slice(1)
-                      ? "text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer"
-                      : "text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] cursor-pointer"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="md:hidden flex items-center gap-2">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-5 h-5 text-neutral-700 dark:text-neutral-300" />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg transition-all duration-200 border border-transparent text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-white dark:hover:bg-neutral-800 "
+              aria-label="Toggle theme"
+            >
+              {mounted ? (
+                resolvedTheme === "dark" ? (
+                  <MoonStars size={21} weight="regular" />
                 ) : (
-                  <AlignRight className="w-5 h-5 text-neutral-700 dark:text-neutral-300" />
-                )}
-              </button>
-            </div>
+                  <SunHorizon size={22} weight="regular" />
+                )
+              ) : (
+                <div className="w-5 h-5" />
+              )}
+            </button>
           </div>
-
-          {isMobileMenuOpen && (
-            <div className="md:hidden pt-4 pb-2 space-y-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
-                    activeSection === item.href.slice(1)
-                      ? "text-neutral-900 dark:text-neutral-100 bg-white/50 dark:bg-neutral-800/50"
-                      : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
+
+        {isMenuOpen && (
+          <div className="pt-4 pb-2 space-y-1 animate-in slide-in-from-top-2 duration-200">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+                  activeSection === item.href.slice(1)
+                    ? "text-neutral-900 dark:text-neutral-100 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span>{item.label}</span>
+                  {activeSection === item.href.slice(1) && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#db775b]" />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       <div

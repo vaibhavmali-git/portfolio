@@ -1,11 +1,7 @@
-'use client';
-
-import type { ReactNode } from "react";
-import { useEffect, useState } from "react";
-import { Geist_Mono } from "next/font/google";
-import { DM_Serif_Display, Inter } from "next/font/google";
-import { Newsreader } from "next/font/google";
+import type { Metadata } from "next";
+import { Geist_Mono, Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/lib/theme-provider";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -23,36 +19,28 @@ const newsreader = Newsreader({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+export const metadata: Metadata = {
+  title: "Vaibhav Mali | Portfolio",
+  description:
+    "Software Developer specialized in full-stack & frontend development.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
-  const [isDark, setIsDark] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    }
-    
-    setIsMounted(true);
-  }, []);
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${newsreader.variable} antialiased`}
-      >
-        {isMounted && children}
+      <body className={`${inter.variable} ${newsreader.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
