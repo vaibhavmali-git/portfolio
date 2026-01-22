@@ -80,7 +80,7 @@ export function Navbar() {
         }}
       />
 
-      <div className="relative z-10 max-w-202 mx-auto px-4 py-3 pb-5">
+      <div className="relative z-10 max-w-201 mx-auto px-4 py-3 pb-5">
         <div className="flex items-center gap-7 justify-between">
           {/* LOGO */}
           <button
@@ -88,15 +88,38 @@ export function Navbar() {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
           >
             <span className="font-bold text-lg font-mono">
-              <span className="text-[#db775b]">&lt;</span>
-              <span className="text-neutral-900 dark:text-neutral-100 font-serif">
+              <span className="text-[#db775b]">// </span>
+              <span className="text-neutral-900 dark:text-neutral-100">
                 VM{" "}
               </span>
-              <span className="text-[#db775b]">/&gt;</span>
             </span>
           </button>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0 sm:gap-1 ">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              aria-label="Toggle theme"
+            >
+              {mounted ? (
+                resolvedTheme === "dark" ? (
+                  <SunHorizon
+                    size={23}
+                    weight="regular"
+                    className="text-[#db775b]"
+                  />
+                ) : (
+                  <MoonStars
+                    size={22}
+                    weight="regular"
+                    className="text-[#6366f1]"
+                  />
+                )
+              ) : (
+                <div className="w-5 h-5" />
+              )}
+            </button>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-lg transition-colors border border-transparent
@@ -112,22 +135,6 @@ export function Navbar() {
                 <XCircle size={21} weight="regular" />
               ) : (
                 <List size={21} weight="regular" />
-              )}
-            </button>
-
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg transition-all duration-200 border border-transparent text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-white dark:hover:bg-neutral-800 "
-              aria-label="Toggle theme"
-            >
-              {mounted ? (
-                resolvedTheme === "dark" ? (
-                  <MoonStars size={21} weight="regular" />
-                ) : (
-                  <SunHorizon size={22} weight="regular" />
-                )
-              ) : (
-                <div className="w-5 h-5" />
               )}
             </button>
           </div>

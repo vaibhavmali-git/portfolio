@@ -56,11 +56,11 @@ export function Hero() {
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
           <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
-            <MapPinLine size={18} weight="regular" className="-mt-0.5" />
+            <MapPinLine size={17} weight="regular" className="-mt-0.5" />
             <span>{personalInfo.location}</span>
           </p>
 
-          <p className="text-base sm:text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">
+          <p className="text-sm sm:text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">
             {renderTagline(personalInfo.tagline)}
           </p>
 
@@ -76,7 +76,7 @@ export function Hero() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 h-9 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+              className="flex items-center justify-center gap-2 px-3 h-9.5 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-[0.55rem] text-sm text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
             >
               {typeof link.icon === "string" ? (
                 <span className="text-base">{link.icon}</span>
@@ -90,9 +90,9 @@ export function Hero() {
           <a
             href="#contact"
             onClick={handleScroll}
-            className="flex items-center justify-center gap-2 px-4 h-9 bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] rounded-lg text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
+            className="flex items-center justify-center gap-2 px-3 h-9.5 rounded-[0.55rem] bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa]  text-sm text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer"
           >
-            <span className="font-medium">Get in touch</span>
+            <span className="font-medium">Let’s talk</span>
             <ArrowCircleDownRight size={17} weight="regular" />
           </a>
         </div>
