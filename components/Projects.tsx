@@ -50,7 +50,7 @@ export function Projects() {
           className="group flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors underline"
         >
           <span>View more on GitHub</span>
-          <ArrowCircleUpRight size={17} weight="regular" />
+          <ArrowCircleUpRight size={17} weight="regular" className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"/>
         </a>
       </div>
     </section>

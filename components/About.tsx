@@ -38,11 +38,11 @@ export function About() {
         href="https://www.instagram.com/vaibhavmali.ig/"
         target="_blank"
         rel="noopener noreferrer"
-        className="group inline-flex items-center gap-1.5 text-[13px] sm:text-sm text-[#db775b] transition-all hover:opacity-80 underline underline-offset-4 decoration-[#db775b]/30 hover:decoration-[#db775b]"
+        className="group inline-flex items-center gap-1.5 text-[13px] sm:text-sm text-[#db775b] transition-all underline underline-offset-2 decoration-[#db775b] hover:decoration-[#db775b]"
       >
         <span>See my photography on Instagram</span>
         <ArrowCircleUpRight 
-          size={16} 
+          size={17} 
           weight="regular" 
           className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" 
         />

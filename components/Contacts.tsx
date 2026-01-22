@@ -43,7 +43,7 @@ export function Contacts() {
           You can reach me anytime at{" "}
           <a
             href={`mailto:${personalInfo.email}`}
-            className="text-[#db775b] font-medium underline underline-offset-4 decoration-[#db775b]/30 hover:decoration-[#db775b] transition-colors break-all sm:break-normal"
+            className="text-[#db775b] font-medium underline underline-offset-2 decoration-[#db775b] hover:decoration-[#db775b] transition-colors"
           >
             {personalInfo.email}
           </a>
