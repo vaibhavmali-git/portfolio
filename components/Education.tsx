@@ -1,6 +1,5 @@
 import React from 'react';
 import { education } from '@/data/education';
-import { GraduationCap } from 'lucide-react';
 
 export function Education() {
   return (

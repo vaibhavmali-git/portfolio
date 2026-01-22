@@ -1,5 +1,4 @@
 import React from 'react';
-import { Briefcase } from 'lucide-react';
 import { Experience } from '@/types';
 import { TypeBadge } from './TypeBadge';
 

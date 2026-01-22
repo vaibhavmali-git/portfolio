@@ -1,5 +1,4 @@
 "use client";
-import { ExternalLink } from "lucide-react";
 
 const MASK_SVG_TOP = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 1 10 5 T 20 5 V 10 H 0 Z" fill="black"/></svg>')`;
 
