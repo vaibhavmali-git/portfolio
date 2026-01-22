@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { ArrowCircleUpRight } from "@phosphor-icons/react";
 import { about } from "@/data/about";
 
 export function About() {
@@ -37,9 +38,9 @@ export function About() {
           href="https://www.instagram.com/vaibhavmali.ig/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-sm text-[#db775b] transition-colors underline"
+          className="group flex items-center gap-2 text-sm text-[#db775b] transition-colors underline"
         >
-          See some of my photography on Instagram →
+          See some of my photography on Instagram   <ArrowCircleUpRight size={17} weight="regular" className="mt-0.5"/>
         </a>
       </div>
     </section>
