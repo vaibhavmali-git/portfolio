@@ -76,7 +76,7 @@ export function Navbar() {
             >
               <span className="font-bold text-lg font-mono">
                 <span className="text-[#db775b]">&lt;</span>
-                <span className="text-neutral-900 dark:text-neutral-100">
+                <span className="text-neutral-900 dark:text-neutral-100 font-serif">
                   VM{" "}
                 </span>
                 <span className="text-[#db775b]">/&gt;</span>
