@@ -82,7 +82,7 @@ export function Navbar() {
 
       <div className="relative z-10 max-w-201 mx-auto px-4 py-3 pb-5">
         <div className="flex items-center gap-7 justify-between">
-          {/* LOGO */}
+        
           <button
             onClick={() => scrollToSection("#home")}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"

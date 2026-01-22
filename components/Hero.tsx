@@ -48,7 +48,7 @@ export function Hero() {
       </div>
 
       <div className="space-y-4">
-        <h1 className="text-2xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.8px]">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.5px]">
           Hey, I'm <span className="font-serif">{personalInfo.name}.</span>
         
           <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
@@ -76,7 +76,7 @@ export function Hero() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 h-9.5 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-[0.55rem] text-sm text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
+              className="flex items-center justify-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 h-8.5 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-sm text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all"
             >
               {typeof link.icon === "string" ? (
                 <span className="text-base">{link.icon}</span>

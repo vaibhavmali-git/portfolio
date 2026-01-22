@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Experience } from '@/types';
 import { TypeBadge } from './TypeBadge';
@@ -8,30 +9,37 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="relative pl-8 pb-12 last:pb-0">
-      <div className="absolute left-0 top-1 w-5 h-5 bg-[#db775b] dark:bg-[#db775b] rounded-full "></div>
-      <div className="absolute left-[8.5px] top-6 bottom-0 w-0.5 bg-neutral-200 dark:bg-neutral-700 last:hidden"></div>
+    <div className="relative pl-6 sm:pl-8 pb-10 sm:pb-12 last:pb-0">
+      <div className="absolute left-0 top-0.5 sm:top-0.5 w-4 h-4 sm:w-5 sm:h-5 bg-[#db775b] rounded-full"></div>
       
-      <div className="space-y-3">
-        <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="absolute left-[7.5px] sm:left-[8.5px] top-6 bottom-0 w-px sm:w-0.5 bg-neutral-200 dark:bg-neutral-700 last:hidden"></div>
+      
+      <div className="space-y-3 sm:space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3">
           <div>
-            <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{experience.role}</h3>
-            <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400 mt-1">
-        
-              <span className="font-medium">{experience.company}</span>
-              <span className="text-neutral-400 dark:text-neutral-600">•</span>
-              <span className="text-sm">{experience.location}</span>
+            <h3 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-neutral-100 leading-snug">
+              {experience.role}
+            </h3>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-neutral-600 dark:text-neutral-400 mt-1">
+              <span className="text-sm sm:text-base font-medium">{experience.company}</span>
+              <span className="hidden sm:inline text-neutral-400 dark:text-neutral-600">•</span>
+              <span className="text-xs sm:text-sm">{experience.location}</span>
             </div>
           </div>
-          <TypeBadge type={experience.type} />
+          
+          <div className="w-fit">
+            <TypeBadge type={experience.type} />
+          </div>
         </div>
         
-        <p className="text-sm text-neutral-500 dark:text-neutral-500  ">{experience.period}</p>
+        <p className="text-xs sm:text-sm font-medium text-neutral-500 dark:text-neutral-500">
+          {experience.period}
+        </p>
         
-        <ul className="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+        <ul className="space-y-2 text-[13px] sm:text-sm text-neutral-700 dark:text-neutral-300">
           {experience.highlights.map((highlight, idx) => (
-            <li key={idx} className="flex gap-2">
-              <span className="text-[#db775b] dark:text-[#db775b] flex-shrink-0 -mt-[2px]">•</span>
+            <li key={idx} className="flex gap-2 leading-relaxed">
+              <span className="text-[#db775b] flex-shrink-0 -mt-[5px] sm:-mt-[2px] text-lg sm:text-base">•</span>
               <span>{highlight}</span>
             </li>
           ))}
