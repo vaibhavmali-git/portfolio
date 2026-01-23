@@ -104,13 +104,13 @@ export function Navbar() {
               {mounted ? (
                 resolvedTheme === "dark" ? (
                   <SunHorizon
-                    size={23}
+                    size={20}
                     weight="regular"
                     className="text-[#db775b]"
                   />
                 ) : (
                   <MoonStars
-                    size={22}
+                    size={19}
                     weight="regular"
                     className="text-[#6366f1]"
                   />
@@ -132,9 +132,9 @@ export function Navbar() {
               aria-label="Toggle navigation menu"
             >
               {isMenuOpen ? (
-                <XCircle size={21} weight="regular" />
+                <XCircle size={19} weight="regular" />
               ) : (
-                <List size={21} weight="regular" />
+                <List size={19} weight="regular" />
               )}
             </button>
           </div>

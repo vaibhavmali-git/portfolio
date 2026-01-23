@@ -1,4 +1,5 @@
 import { Project } from "@/types";
+
 export const shippedProjects: Project[] = [
   {
     id: 1,
@@ -7,30 +8,28 @@ export const shippedProjects: Project[] = [
       "A decentralized lending and borrowing platform built on the Internet Computer Protocol (ICP). I owned the frontend development, handled Web3 integrations, token flows, and built the DEX UI to display liquidity and farming data in real time.",
     tech: "React, Internet Computer (ICP), Rust, Web3.js, Tailwind CSS",
     liveUrl: "https://bn2g3-lqaaa-aaaaj-azykq-cai.icp0.io",
-    thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768193539/Screenshot_2026-01-12_at_10.20.25_AM_wga2lr.png",
+    thumbnail: "/images/projects/dfinance.png",
   },
+
   {
     id: 2,
-    name: "Clans App",
-    description:
-      "A mobile-first community app for campaign management and user onboarding. I worked mainly on the React Native frontend and also helped on the backend to fix OAuth token refresh issues and improve leaderboard API performance.",
-    tech: "React Native, Expo, TypeScript, Node.js, PostgreSQL, Redux Toolkit",
-    thumbnail:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
-  },
-  {
-    id: 3,
     name: "BlockseBlock",
     description:
       "A Web3 hackathon platform used by developers worldwide. I contributed to the frontend by building event management flows, project submissions, and the judging dashboard.",
     tech: "React, TypeScript, Node.js, MongoDB",
     liveUrl: "https://learn.blockseblock.com/",
+    thumbnail: "/images/projects/blockseblock.png",
+  },
+  {
+    id: 3,
+    name: "Clans App",
+    description:
+      "A mobile-first community app for campaign management and user onboarding. I worked mainly on the React Native frontend and also helped on the backend to fix OAuth token refresh issues and improve leaderboard API performance.",
+    tech: "React Native, Expo, TypeScript, Node.js, PostgreSQL, Redux Toolkit",
     thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768194434/blockseblock_yx9iur.png",
+      "",
   },
 ];
-
 
 export const personalProjects: Project[] = [
   {
@@ -41,8 +40,7 @@ export const personalProjects: Project[] = [
     tech: "MERN Stack, Tailwind CSS, Google Gemini AI",
     githubUrl: "https://github.com/vaibhavmali-git/Invoaice",
     liveUrl: "https://invoaice.vercel.app/",
-    thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768194651/invoaice_g84l7v.png",
+    thumbnail: "/images/projects/invoaice.png",
   },
   {
     id: 5,
@@ -52,8 +50,7 @@ export const personalProjects: Project[] = [
     tech: "React, Redux, Material UI, Framer Motion, Chart.js",
     githubUrl: "https://github.com/vaibhavmali-git/CryptoInsight",
     liveUrl: "https://crypto-insight-vaibhavmali.netlify.app/",
-    thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768195284/cryptoinsight_nntxxw.png",
+    thumbnail: "/images/projects/crypto-insight.png",
   },
   {
     id: 6,
@@ -63,8 +60,7 @@ export const personalProjects: Project[] = [
     tech: "React, Firebase, Ant Design, React Toastify",
     githubUrl: "https://github.com/vaibhavmali-git/finance-flow",
     liveUrl: "https://financeflow-vaibhavmali.netlify.app/",
-    thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768195285/finance-flow_yoac9q.png",
+    thumbnail: "/images/projects/finance-flow.png",
   },
 
   {
@@ -75,7 +71,6 @@ export const personalProjects: Project[] = [
     tech: "React, Firebase, Redux Toolkit",
     githubUrl: "https://github.com/vaibhavmali-git/podcasts-react-app",
     liveUrl: "https://podcast-react-vaibhav.netlify.app/",
-    thumbnail:
-      "https://res.cloudinary.com/dbkkmdery/image/upload/v1768195281/podcast-app_qqv5np.png",
+    thumbnail: "/images/projects/podcast-app.png",
   },
 ];
