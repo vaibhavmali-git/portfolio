@@ -41,7 +41,7 @@ export default function ProjectsPage() {
       <div>
         {/* Company Projects */}
 
-        <section id="company" className="space-y-3 mb-13 scroll-mt-24">
+        <section className="space-y-3 mb-13 scroll-mt-24">
           <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider pb-3 inline-block">
             Company Projects
           </h2>

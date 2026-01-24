@@ -9,10 +9,10 @@ const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.or
 const MASK_WIGGLE_LINE = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 1 10 5 T 20 5" stroke="black" stroke-width="2" fill="none"/></svg>')`;
 
 const navItems = [
-  { label: "home", href: "#home" },
-  { label: "experience", href: "#experience" },
-  { label: "projects", href: "#projects" },
-  { label: "contact", href: "#contact" },
+  { label: "Home", href: "#home" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -21,6 +21,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -41,7 +42,7 @@ export function Navbar() {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= 120 && rect.bottom >= 120;
         }
         return false;
       });
@@ -76,7 +77,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div
         className={`absolute inset-0 z-0 transition-colors duration-300 ${
-          isScrolled || pathname !== "/" 
+          isScrolled || pathname !== "/"
             ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-md"
             : "bg-[#FBFAF4] dark:bg-[#1F1F1F]"
         }`}
@@ -93,20 +94,30 @@ export function Navbar() {
       />
 
       <div className="relative z-10 max-w-204 mx-auto px-4 py-3 pb-5">
-        <div className="flex items-center gap-7 justify-between">
+        <div className="flex items-center justify-between">
           <button
             onClick={() => handleNavigation("#home")}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200 transition-all"
+            className="flex items-center gap-2 hover:opacity-80 transition-all cursor-pointer active:scale-95 duration-200"
           >
             <span className="font-bold text-lg font-mono ml-1">
               <span className="text-[#db775b]">// </span>
-              <span className="text-neutral-900 dark:text-neutral-100">
-                VM{" "}
-              </span>
+              <span className="text-neutral-900 dark:text-neutral-100">VM</span>
             </span>
           </button>
 
-          <div className="flex items-center gap-0 sm:gap-1 ">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <div className="hidden md:flex items-center gap-6  border-r border-neutral-300 dark:border-neutral-700 pr-5">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavigation(item.href)}
+                  className={`text-sm font-medium transition-colors  cursor-pointer text-neutral-500 dark:text-neutral-400 lowercase hover:text-neutral-900 dark:hover:text-neutral-200`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800 cursor-pointer active:scale-90"
@@ -131,9 +142,10 @@ export function Navbar() {
               )}
             </button>
 
+            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-lg  border border-transparent active:scale-90 duration-200 transition-all cursor-pointer
+              className={`md:hidden p-2 rounded-lg border border-transparent active:scale-90 duration-200 transition-all cursor-pointer
                  ${
                    isMenuOpen
                      ? "bg-white dark:bg-neutral-800"
@@ -151,8 +163,9 @@ export function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Dropdown Menu */}
         {isMenuOpen && (
-          <div className="pt-4 pb-2 space-y-1 animate-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden pt-4 pb-2 space-y-1 animate-in slide-in-from-top-2 duration-200">
             {navItems.map((item) => (
               <button
                 key={item.href}
