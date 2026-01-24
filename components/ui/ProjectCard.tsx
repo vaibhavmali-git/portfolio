@@ -16,7 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     .map((point) => (point.endsWith(".") ? point : `${point}.`));
 
   return (
-    <div className="group bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-[rgb(48,48,48)] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col h-full hover:shadow-lg dark:hover:shadow-neutral-900/30">
+    <div className="group bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-[rgb(48,48,48)] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col h-full shadow-sm">
       {project.thumbnail && (
         <div className="p-4 sm:p-5 pb-0 sm:pb-0">
           <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-[rgb(60,60,60)]">

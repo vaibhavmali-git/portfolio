@@ -16,7 +16,7 @@ export function Projects() {
             </h2>
             {shippedProjects.length > 2 && (
               <Link
-                href="/projects"
+                href="/projects" 
                 className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-300 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap  -mt-1.5 sm:-mt-2"
               >
                 view more
@@ -51,7 +51,7 @@ export function Projects() {
             </h2>
             {personalProjects.length > 2 && (
               <Link
-                href="/projects"
+                href="/projects#personal" 
                 className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-300 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap -mt-1.5 sm:-mt-2"
               >
                 view more

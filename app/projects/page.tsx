@@ -10,9 +10,9 @@ export default function ProjectsPage() {
   const router = useRouter();
 
   return (
-
     <main className="max-w-204 mx-auto px-6 pb-20">
       <div className="mb-13">
+
         <div className="mb-6">
           <button
             onClick={() => router.back()}
@@ -28,7 +28,6 @@ export default function ProjectsPage() {
           </button>
         </div>
 
-
         <div className="space-y-3">
           <h1 className="text-3xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-tight">
             All Projects
@@ -39,11 +38,10 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-
-      <div >
-
+      <div>
         {/* Company Projects */}
-        <section className="space-y-3 mb-13">
+
+        <section id="company" className="space-y-3 mb-13 scroll-mt-24">
           <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider pb-3 inline-block">
             Company Projects
           </h2>
@@ -54,12 +52,12 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-
         <Divider />
 
         {/* Personal Projects */}
-        <section className="space-y-3 mt-10">
-          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider  pb-3 inline-block">
+
+        <section id="personal" className="space-y-3 mt-10 scroll-mt-22">
+          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider pb-3 inline-block">
             Personal Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -68,7 +66,6 @@ export default function ProjectsPage() {
             ))}
           </div>
         </section>
-
       </div>
     </main>
   );
