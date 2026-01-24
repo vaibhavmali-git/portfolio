@@ -6,7 +6,7 @@ export function TechStack() {
   return (
     <section className="space-y-5 scroll-mt-20">
       <div className="space-y-2">
-        {/* <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">TECH STACK</h2> */}
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">TECH STACK</h2>
         <p className="text-neutral-900 dark:text-neutral-300  text-sm">
           Here are the tools and technologies I work with.
         </p>

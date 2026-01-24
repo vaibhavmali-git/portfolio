@@ -37,12 +37,12 @@ export function Hero() {
 
   return (
     <section id="home" className="space-y-6 scroll-mt-20 pt-2.5">
-      <div className="w-16 h-16 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-700">
+      <div className="w-18 h-18 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-700">
         <Image
-          src="https://res.cloudinary.com/dbkkmdery/image/upload/v1768062121/IMG_20260110_214814_axjlpe.jpg"
+          src="/images/profile.webp"
           alt={`${personalInfo.name} profile photo`}
-          width={64}
-          height={64}
+          width={80}
+          height={80}
           className="object-cover"
         />
       </div>
