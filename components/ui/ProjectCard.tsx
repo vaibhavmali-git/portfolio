@@ -1,6 +1,7 @@
 "use client";
 import { GithubLogo, ArrowCircleUpRight } from "@phosphor-icons/react";
 import { Project } from "@/types";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -19,10 +20,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {project.thumbnail && (
         <div className="p-4 sm:p-5 pb-0 sm:pb-0">
           <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-[rgb(60,60,60)]">
-            <img
+
+            <Image
               src={project.thumbnail}
               alt={`${project.name} preview`}
-              className="object-cover w-full h-full transition-all duration-500 dark:brightness-[0.85] group-hover:dark:brightness-100"
+              fill
+              className="object-cover transition-all duration-500 dark:brightness-[0.85] group-hover:dark:brightness-100"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

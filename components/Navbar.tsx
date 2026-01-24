@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { List, XCircle, SunHorizon, MoonStars } from "@phosphor-icons/react";
+import { useRouter, usePathname } from "next/navigation";
 
 const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 0 H20 V5 Q15 9 10 5 T0 5 V0 Z" fill="black"/></svg>')`;
-
 const MASK_WIGGLE_LINE = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 1 10 5 T 20 5" stroke="black" stroke-width="2" fill="none"/></svg>')`;
 
 const navItems = [
@@ -21,12 +21,19 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
       const sections = navItems.map((item) => item.href.slice(1));
@@ -43,16 +50,21 @@ export function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.slice(1));
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-      setIsMenuOpen(false);
+  const handleNavigation = (href: string) => {
+    setIsMenuOpen(false);
+
+    if (pathname === "/") {
+      const element = document.getElementById(href.slice(1));
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    } else {
+      router.push(`/${href}`);
     }
   };
 
@@ -64,7 +76,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div
         className={`absolute inset-0 z-0 transition-colors duration-300 ${
-          isScrolled
+          isScrolled || pathname !== "/" // Always show background if not on home top
             ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-md"
             : "bg-[#FBFAF4] dark:bg-[#1F1F1F]"
         }`}
@@ -80,14 +92,13 @@ export function Navbar() {
         }}
       />
 
-      <div className="relative z-10 max-w-201 mx-auto px-4 py-3 pb-5">
+      <div className="relative z-10 max-w-204 mx-auto px-4 py-3 pb-5">
         <div className="flex items-center gap-7 justify-between">
-        
           <button
-            onClick={() => scrollToSection("#home")}
+            onClick={() => handleNavigation("#home")}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
           >
-            <span className="font-bold text-lg font-mono">
+            <span className="font-bold text-lg font-mono ml-1">
               <span className="text-[#db775b]">// </span>
               <span className="text-neutral-900 dark:text-neutral-100">
                 VM{" "}
@@ -98,7 +109,7 @@ export function Navbar() {
           <div className="flex items-center gap-0 sm:gap-1 ">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800"
               aria-label="Toggle theme"
             >
               {mounted ? (
@@ -145,7 +156,7 @@ export function Navbar() {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                   activeSection === item.href.slice(1)
                     ? "text-neutral-900 dark:text-neutral-100 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"

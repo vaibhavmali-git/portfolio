@@ -3,9 +3,7 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  
 
   * {
     font-family: var(--font-sans), system-ui, sans-serif;

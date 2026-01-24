@@ -4,7 +4,7 @@ const MASK_WIGGLE_LINE = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3
 
 export default function Divider() {
   return (
-    <div className="flex justify-center w-full my-8">
+    <div className="flex justify-center w-full">
       <div
         className="w-full max-w-4xl h-2.5 bg-neutral-500/30 dark:bg-neutral-700/50 transition-colors duration-300"
         style={{
