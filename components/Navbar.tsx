@@ -109,7 +109,7 @@ export function Navbar() {
           <div className="flex items-center gap-0 sm:gap-1 ">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800"
+              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800 cursor-pointer active:scale-50"
               aria-label="Toggle theme"
             >
               {mounted ? (
@@ -133,7 +133,7 @@ export function Navbar() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-lg transition-colors border border-transparent
+              className={`p-2 rounded-lg  border border-transparent active:scale-50 duration-200 transition-all cursor-pointer
                  ${
                    isMenuOpen
                      ? "bg-white dark:bg-neutral-800"
@@ -160,7 +160,7 @@ export function Navbar() {
                 className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                   activeSection === item.href.slice(1)
                     ? "text-neutral-900 dark:text-neutral-100 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 "
                 }`}
               >
                 <div className="flex items-center justify-between">

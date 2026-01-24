@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Projects() {
   return (
-    <section id="projects" className="space-y-12 scroll-mt-20">
+    <section id="projects" className="space-y-12 scroll-mt-20 mb-11">
       {/* Section 1: Company Projects */}
       <div className="space-y-5">
         <div className="space-y-2">
@@ -17,7 +17,7 @@ export function Projects() {
             {shippedProjects.length > 2 && (
               <Link
                 href="/projects" 
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-300 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap  -mt-1.5 sm:-mt-2"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap  -mt-1.5 sm:-mt-2"
               >
                 view more
                 <ArrowCircleRight
@@ -27,7 +27,7 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-900 dark:text-neutral-300 text-[13px] sm:text-sm">
+          <p className="text-neutral-600 dark:text-neutral-400 text-[13px] sm:text-sm">
             Production applications I've built and maintained at{" "}
             <span className="font-medium text-neutral-900 dark:text-neutral-100 underline underline-offset-2">
               QuadB Technologies
@@ -52,7 +52,7 @@ export function Projects() {
             {personalProjects.length > 2 && (
               <Link
                 href="/projects#personal" 
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-300 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap -mt-1.5 sm:-mt-2"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap -mt-1.5 sm:-mt-2"
               >
                 view more
                 <ArrowCircleRight
@@ -62,7 +62,7 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-900 dark:text-neutral-300 text-sm">
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm">
             My personal projects:
           </p>
         </div>

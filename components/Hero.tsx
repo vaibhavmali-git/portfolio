@@ -75,10 +75,10 @@ export function Hero() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-8.5 h-8.5 sm:w-10 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 transition-all shrink-0"
+              className="flex items-center justify-center w-8.5 h-8.5 sm:w-10 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 shrink-0 active:scale-90 duration-200 transition-all"
               aria-label={link.name}
             >
-              <span className="shrink-0 scale-90 sm:scale-100">
+              <span className="shrink-0 scale-90 sm:scale-100 ">
                 {link.icon}
               </span>
             </a>
@@ -87,7 +87,7 @@ export function Hero() {
           <a
             href="#contact"
             onClick={handleScroll}
-            className="flex items-center justify-center gap-2 px-3 sm:px-4 h-8.5 sm:h-10 rounded-[0.55rem] bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] text-white dark:text-neutral-900 hover:opacity-90 transition-all shadow-sm cursor-pointer shrink-0"
+            className="flex items-center justify-center gap-2 px-3 sm:px-4 h-8.5 sm:h-10 rounded-[0.55rem] bg-[#262626] dark:bg-[#fafafa] border border-[#262626] dark:border-[#fafafa] text-white dark:text-neutral-900 hover:opacity-90 active:scale-90 duration-200 transition-all shadow-sm cursor-pointer shrink-0"
           >
             <span className="font-medium text-xs sm:text-sm">Let’s talk</span>
             <ArrowCircleDownRight size={18} weight="regular" />

@@ -8,7 +8,7 @@ import Divider from "@/components/ui/Divider";
 
 export default function Home() {
   return (
-    <main className="max-w-204 mx-auto px-6 pb-12 space-y-10">
+    <main className="max-w-204 mx-auto px-6 pb-14 space-y-10">
       <Hero />
       <Divider />
 

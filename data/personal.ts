@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
   title: "Software Developer",
   location: "Maharashtra, India",
   tagline: "Software Developer specialized in *full-stack* & *frontend* development.",
-  description: "Currently working at QuadB Technologies, building and maintaining production-grade frontend and full-stack features using React, Next.js, and TypeScript."
+  description: "Currently working at QuadB Technologies, building and maintaining frontend and full-stack features using React, Next.js, and TypeScript."
   ,
   email: "vaibhavmali.dev@gmail.com",
   github: "https://github.com/yourusername",
