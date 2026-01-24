@@ -5,49 +5,52 @@ import { about } from "@/data/about";
 export function About() {
   const renderHighlightedText = (text: string) => {
     const parts = text.split("*");
-    return parts.map((part, index) =>
-      index % 2 === 1 ? (
-        <span key={index} className="text-[#db775b]">
-          {part}
-        </span>
-      ) : (
-        part
-      ),
-    );
+
+    return parts.map((part, index) => {
+      if (index % 2 === 1 && part.toLowerCase() === "instagram") {
+        return (
+          <a
+            key={index}
+            href="https://www.instagram.com/vaibhavmali.ig/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#db775b] underline underline-offset-2 decoration-[#db775b] hover:opacity-80 transition"
+          >
+            {part}
+          </a>
+        );
+      }
+
+      if (index % 2 === 1) {
+        return (
+          <span key={index} className="text-[#db775b]">
+            {part}
+          </span>
+        );
+      }
+
+      return part;
+    });
   };
 
   return (
-    <section id="about" className="space-y-6 scroll-mt-20">
+    <section id="about" className="space-y-2 scroll-mt-20">
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
           ABOUT ME
         </h2>
       </div>
 
-    <div className="space-y-4 sm:space-y-5 -mt-2 sm:-mt-4">
-      {about.summary.split("\n\n").map((paragraph: string, index: number) => (
-        <p
-          key={index}
-          className="text-neutral-900 dark:text-neutral-300 leading-relaxed text-[13px] sm:text-sm"
-        >
-          {renderHighlightedText(paragraph)}
-        </p>
-      ))}
-
-      <a
-        href="https://www.instagram.com/vaibhavmali.ig/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group inline-flex items-center gap-1.5 text-[13px] sm:text-sm text-[#db775b] transition-all underline underline-offset-2 decoration-[#db775b] hover:decoration-[#db775b]"
-      >
-        <span>See my photography on Instagram</span>
-        <ArrowCircleUpRight 
-          size={17} 
-          weight="regular" 
-          className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" 
-        />
-      </a>
-    </div>
+      <div className="space-y-4 sm:space-y-3">
+        {about.summary.split("\n\n").map((paragraph: string, index: number) => (
+          <p
+            key={index}
+            className="text-neutral-900 dark:text-neutral-300 leading-relaxed text-[13px] sm:text-sm"
+          >
+            {renderHighlightedText(paragraph)}
+          </p>
+        ))}
+      </div>
     </section>
   );
 }

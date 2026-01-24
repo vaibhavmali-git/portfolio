@@ -12,12 +12,11 @@ export default function ProjectsPage() {
   return (
     <main className="max-w-204 mx-auto px-6 pb-20">
       <div className="mb-13">
-
         <div className="mb-6">
           <button
             onClick={() => router.back()}
             type="button"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors group cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all group cursor-pointer"
           >
             <ArrowCircleLeft
               size={20}
@@ -33,7 +32,8 @@ export default function ProjectsPage() {
             All Projects
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-xl">
-            A complete archive of the production applications and personal experiments I've built.
+            A complete archive of the production applications and personal
+            experiments I've built.
           </p>
         </div>
       </div>

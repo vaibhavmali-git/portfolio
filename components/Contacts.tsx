@@ -5,14 +5,14 @@ import { personalInfo } from "@/data/personal";
 
 export function Contacts() {
   return (
-    <section className="space-y-5" id="contact">
+    <section className="space-y-3.5" id="contact">
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
-          GET IN TOUCH
+          Get in touch
         </h2>
       </div>
 
-   <div className="space-y-6 sm:space-y-8">
+   <div className="space-y-4">
      
       <div className="flex flex-wrap gap-2 sm:gap-3">
         {socialLinks

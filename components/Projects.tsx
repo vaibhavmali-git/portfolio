@@ -16,8 +16,8 @@ export function Projects() {
             </h2>
             {shippedProjects.length > 2 && (
               <Link
-                href="/projects" 
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap  -mt-1.5 sm:-mt-2"
+                href="/projects"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap  -mt-1.5 sm:-mt-2"
               >
                 view more
                 <ArrowCircleRight
@@ -51,8 +51,8 @@ export function Projects() {
             </h2>
             {personalProjects.length > 2 && (
               <Link
-                href="/projects#personal" 
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] transition-colors whitespace-nowrap -mt-1.5 sm:-mt-2"
+                href="/projects#personal"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap -mt-1.5 sm:-mt-2"
               >
                 view more
                 <ArrowCircleRight

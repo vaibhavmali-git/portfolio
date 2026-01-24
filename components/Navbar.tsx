@@ -76,7 +76,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div
         className={`absolute inset-0 z-0 transition-colors duration-300 ${
-          isScrolled || pathname !== "/" // Always show background if not on home top
+          isScrolled || pathname !== "/" 
             ? "bg-[#FBFAF4]/95 dark:bg-[#1F1F1F]/95 backdrop-blur-md"
             : "bg-[#FBFAF4] dark:bg-[#1F1F1F]"
         }`}
@@ -96,7 +96,7 @@ export function Navbar() {
         <div className="flex items-center gap-7 justify-between">
           <button
             onClick={() => handleNavigation("#home")}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200 transition-all"
           >
             <span className="font-bold text-lg font-mono ml-1">
               <span className="text-[#db775b]">// </span>
@@ -109,7 +109,7 @@ export function Navbar() {
           <div className="flex items-center gap-0 sm:gap-1 ">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800 cursor-pointer active:scale-50"
+              className="p-2 rounded-lg transition-all duration-200 border border-transparent hover:bg-white dark:hover:bg-neutral-800 cursor-pointer active:scale-90"
               aria-label="Toggle theme"
             >
               {mounted ? (
@@ -133,7 +133,7 @@ export function Navbar() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-lg  border border-transparent active:scale-50 duration-200 transition-all cursor-pointer
+              className={`p-2 rounded-lg  border border-transparent active:scale-90 duration-200 transition-all cursor-pointer
                  ${
                    isMenuOpen
                      ? "bg-white dark:bg-neutral-800"
