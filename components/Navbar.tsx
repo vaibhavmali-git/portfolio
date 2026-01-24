@@ -106,7 +106,7 @@ export function Navbar() {
           </button>
 
           <div className="flex items-center gap-1 sm:gap-2">
-            <div className="hidden md:flex items-center gap-6  border-r border-neutral-300 dark:border-neutral-700 pr-5">
+            <div className="hidden md:flex items-center gap-6  border-r border-neutral-300 dark:border-neutral-700 pr-5.5">
               {navItems.map((item) => (
                 <button
                   key={item.href}
