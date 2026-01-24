@@ -12,7 +12,7 @@ export function Contacts() {
         </h2>
       </div>
 
-   <div className="space-y-4">
+   <div className="space-y-4.5">
      
       <div className="flex flex-wrap gap-2 sm:gap-3">
         {socialLinks
