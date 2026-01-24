@@ -40,11 +40,11 @@ export default function ProjectsPage() {
       </div>
 
 
-      <div className="space-y-10">
+      <div >
 
         {/* Company Projects */}
-        <section className="space-y-3">
-          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider border-b border-neutral-200 dark:border-neutral-800 pb-3 inline-block">
+        <section className="space-y-3 mb-13">
+          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider pb-3 inline-block">
             Company Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -58,8 +58,8 @@ export default function ProjectsPage() {
         <Divider />
 
         {/* Personal Projects */}
-        <section className="space-y-3">
-          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider border-b border-neutral-200 dark:border-neutral-800 pb-3 inline-block">
+        <section className="space-y-3 mt-10">
+          <h2 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider  pb-3 inline-block">
             Personal Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
