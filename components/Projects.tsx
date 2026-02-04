@@ -28,8 +28,8 @@ export function Projects() {
             )}
           </div>
           <p className="text-neutral-600 dark:text-neutral-400 text-[13px] sm:text-sm">
-            Production applications I've built and maintained at{" "}
-            <span className="font-medium text-neutral-900 dark:text-neutral-100 underline underline-offset-2">
+            Projects I worked on at{" "}
+            <span className="font-medium text-neutral-900 dark:text-neutral-100">
               QuadB Technologies
             </span>
             :

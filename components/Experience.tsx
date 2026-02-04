@@ -8,7 +8,7 @@ export function Experience() {
       <div className="space-y-2">
         <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">WORK EXPERIENCE</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          My professional journey and key contributions:
+          Recent positions:
         </p>
       </div>
       
