@@ -39,7 +39,7 @@ export function Education() {
                 </p>
 
                 {edu.cgpa && (
-                  <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700/30 sm:text-xs font-medium rounded-md">
+                  <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700/30 text-[10px] sm:text-xs font-medium rounded-md">
                     CGPA: {edu.cgpa}
                   </span>
                 )}
