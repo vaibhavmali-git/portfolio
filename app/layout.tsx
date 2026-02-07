@@ -10,6 +10,12 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
+
 const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${newsreader.variable} antialiased min-h-screen bg-[#fbfaf4] dark:bg-[#191919] transition-colors duration-300 relative`}
+        className={`${inter.variable} ${newsreader.variable} ${geistMono.variable} antialiased min-h-screen bg-[#fbfaf4] dark:bg-[#191919] transition-colors duration-300 relative`}
       >
         <ThemeProvider
           attribute="class"

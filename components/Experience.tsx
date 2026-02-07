@@ -24,7 +24,7 @@ export function Experience() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`
-                relative flex-1 py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200 z-10 outline-none cursor-pointer text-center uppercase
+                relative flex-1 py-2 text-xs sm:text-[12.5px] font-medium rounded-lg transition-colors duration-200 z-10 outline-none cursor-pointer text-center uppercase
                 ${
                   activeTab === tab.id
                     ? "text-neutral-900 dark:text-neutral-100"
