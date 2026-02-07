@@ -111,7 +111,7 @@ export function Navbar() {
                 <button
                   key={item.href}
                   onClick={() => handleNavigation(item.href)}
-                  className={`text-sm font-medium transition-colors  cursor-pointer text-neutral-500 dark:text-neutral-400 lowercase hover:text-neutral-900 dark:hover:text-neutral-200`}
+                  className={`text-sm font-medium transition-colors  cursor-pointer text-neutral-600 dark:text-neutral-300/95 lowercase hover:text-[#db775b]`}
                 >
                   {item.label}
                 </button>
