@@ -36,7 +36,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/917618795110",
+    url: "https://wa.me/917620795110",
     icon: <WhatsappLogo size={20} weight="regular" />,
   },
 ];

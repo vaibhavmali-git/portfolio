@@ -19,7 +19,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Vaibhav Mali | Portfolio",
   description:
-    "Software Developer specialized in full-stack & frontend development.",
+    "Software Developer specialized in full-stack development.",
 };
 
 export default function RootLayout({
