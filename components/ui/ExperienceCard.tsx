@@ -1,7 +1,6 @@
 "use client";
-import React from 'react';
-import { Experience } from '@/types';
-import { TypeBadge } from './TypeBadge';
+import React from "react";
+import { Experience } from "@/types";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -9,37 +8,32 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="relative pl-6 sm:pl-8 pb-10 sm:pb-12 last:pb-0">
-      <div className="absolute left-0 sm:left-1 top-0.5 sm:top-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#db775b] rounded-full"></div>
-      
-      <div className="absolute left-[4px] sm:left-[8.5px] top-3.5 sm:top-4 bottom-0 w-px sm:w-0.5 bg-neutral-200 dark:bg-neutral-700 last:hidden"></div>
-      
-      <div className="space-y-3 sm:space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3">
-          <div>
-            <h3 className="text-base sm:text-base font-medium text-neutral-900 dark:text-neutral-100 leading-snug">
-              {experience.role}
-            </h3>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-neutral-600 dark:text-neutral-400 mt-1">
-              <span className="text-sm sm:text-base font-medium">{experience.company}</span>
-              <span className="hidden sm:inline text-neutral-400 dark:text-neutral-600">•</span>
-              <span className="text-xs sm:text-sm">{experience.location}</span>
-            </div>
-          </div>
-          
-          <div className="w-fit">
-            <TypeBadge type={experience.type} />
-          </div>
+    <div className="relative pl-6 sm:pl-8 pb-10 sm:pb-12 last:pb-0 group">
+      <div className="absolute left-0 sm:left-1 top-0.5 sm:top-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#db775b] rounded-full ring-4 ring-white dark:ring-neutral-700" />
+
+      <div className="absolute left-[4px] sm:left-[8.5px] top-4 sm:top-5 bottom-0 w-px sm:w-0.5 bg-neutral-300 dark:bg-neutral-700 group-last:hidden"></div>
+
+      <div className="space-y-2">
+        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1">
+          <h3 className="text-base sm:text-lg font-medium text-neutral-900 dark:text-neutral-200 leading-snug">
+            {experience.role}
+          </h3>
+
+          <span className="inline-flex items-center px-2 py-1 text-[10px] sm:text-[11px] font-medium rounded-[0.5rem] border uppercase bg-neutral-50 text-neutral-700 border-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:border-neutral-700">
+            {experience.period}
+          </span>
         </div>
-        
-        <p className="text-xs sm:text-sm font-medium text-neutral-500 dark:text-neutral-500">
-          {experience.period}
-        </p>
-        
-        <ul className="space-y-1 text-[13px] sm:text-sm text-neutral-700 dark:text-neutral-300">
+
+        <div className="text-xs sm:text-sm font-medium text-neutral-900 dark:text-neutral-200">
+          {experience.company}
+        </div>
+
+        <ul className="space-y-1 text-[13px] sm:text-sm text-neutral-700 dark:text-neutral-300 mt-2">
           {experience.highlights.map((highlight, idx) => (
             <li key={idx} className="flex gap-2 leading-relaxed">
-              <span className="text-[#db775b] flex-shrink-0 -mt-[5px] sm:-mt-[2px] text-lg sm:text-base">•</span>
+              <span className="text-[#db775b] flex-shrink-0 -mt-[5px] sm:-mt-[2px] text-lg sm:text-base">
+                •
+              </span>
               <span>{highlight}</span>
             </li>
           ))}

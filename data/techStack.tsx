@@ -23,10 +23,7 @@ export const techStack: TechStackItem[] = [
     name: "TypeScript", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /> 
   },
-  { 
-    name: "JavaScript", 
-    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /> 
-  },
+
   { 
     name: "Tailwind", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" /> 

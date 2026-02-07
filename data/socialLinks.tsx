@@ -12,31 +12,31 @@ export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
     url: "https://github.com/vaibhavmali-git",
-    icon: <GithubLogo size={20} weight="regular" />,
+    icon: <GithubLogo size={21} weight="regular" />,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/vaibhavmali-li/",
-    icon: <LinkedinLogo size={20} weight="regular" />,
+    icon: <LinkedinLogo size={21} weight="regular" />,
   },
   {
     name: "Email",
     url: "mailto:vaibhavmali.dev@gmail.com",
-    icon: <Envelope size={20} weight="regular" />,
+    icon: <Envelope size={21} weight="regular" />,
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/vaibhavmali.ig/",
-    icon: <InstagramLogo size={20} weight="regular" />,
+    icon: <InstagramLogo size={21} weight="regular" />,
   },
   {
     name: "X/Twitter",
     url: "https://twitter.com/vaibhavmali_01",
-    icon: <XLogo size={20} weight="regular" />,
+    icon: <XLogo size={21} weight="regular" />,
   },
   {
     name: "WhatsApp",
     url: "https://wa.me/917620795110",
-    icon: <WhatsappLogo size={20} weight="regular" />,
+    icon: <WhatsappLogo size={21} weight="regular" />,
   },
 ];

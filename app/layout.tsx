@@ -18,8 +18,7 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: "Vaibhav Mali | Portfolio",
-  description:
-    "Software Developer specialized in full-stack development.",
+  description: "Software Developer specialized in full-stack development.",
 };
 
 export default function RootLayout({
@@ -38,7 +37,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* 1. BACKGROUND TEXTURE */}
           <div
             className="
               pointer-events-none
@@ -53,13 +51,12 @@ export default function RootLayout({
             "
             style={{
               backgroundImage: "url('/images/textures/noise-light.png')",
-              backgroundSize: "140px 140px",
+              backgroundSize: "160px 160px",
             }}
           />
 
           <Navbar />
 
-          {/* 3. PAGE CONTENT */}
           <div className="relative z-10 pt-20">{children}</div>
           <Footer />
         </ThemeProvider>

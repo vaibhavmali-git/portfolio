@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     role: "Software Developer",
     company: "QuadB Technologies",
     location: "Remote",
-    period: "Nov 2024 – Present",
+    period: "Nov 2024 - Present",
     type: "Full-time",
     highlights: [
       "Worked across frontend and backend on live applications including DFinance (Web3), Clans (mobile + backend), and BlockseBlock (LMS), contributing to feature development, integrations, and platform stability.",
