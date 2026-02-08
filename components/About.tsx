@@ -36,7 +36,7 @@ export function About() {
   return (
     <section id="about" className="space-y-2 scroll-mt-20">
       <div className="space-y-2">
-        <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase font-fraunces text-lg">
           ABOUT ME
         </h2>
       </div>
@@ -45,7 +45,7 @@ export function About() {
         {about.summary.split("\n\n").map((paragraph: string, index: number) => (
           <p
             key={index}
-            className="text-neutral-900 dark:text-neutral-300 leading-relaxed text-[13px] sm:text-sm"
+            className="text-neutral-900 dark:text-neutral-300 leading-relaxed text-[13px] sm:text-sm max-w-[44rem]"
           >
             {renderHighlightedText(paragraph)}
           </p>

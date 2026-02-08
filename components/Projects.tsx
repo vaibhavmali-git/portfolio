@@ -11,7 +11,7 @@ export function Projects() {
       <div className="space-y-5">
         <div className="space-y-2">
           <div className="flex items-center justify-between gap-2 sm:gap-4">
-            <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-base sm:text-lg">
+            <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase font-fraunces text-lg">
               Company Projects
             </h2>
             {shippedProjects.length > 2 && (
@@ -27,7 +27,7 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
             Projects I worked on at{" "}
             <span className="font-semibold text-neutral-900 dark:text-neutral-100 text-xs sm:text-sm font-mono tracking-tight leading-none">
               QuadB Technologies
@@ -46,7 +46,7 @@ export function Projects() {
       <div className="space-y-5">
         <div className="space-y-2">
           <div className="flex items-center justify-between gap-2 sm:gap-4">
-            <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-base sm:text-lg">
+            <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase font-fraunces text-lg">
               Personal Projects
             </h2>
             {personalProjects.length > 2 && (
@@ -62,7 +62,7 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
             My personal projects:
           </p>
         </div>

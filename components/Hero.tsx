@@ -53,17 +53,17 @@ export function Hero() {
           <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
         </h1>
 
-        <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
+        <div className="space-y-3 text-neutral-700 dark:text-neutral-300">
           <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
-            <MapPinLine size={17} weight="duotone" className="-mt-0.5" />
-            <span className="font-mono tracking-tight leading-none font-medium">{personalInfo.location}</span>
+            <MapPinLine size={17} weight="duotone" className="-mt-1" />
+            <span className="font-medium">{personalInfo.location}</span>
           </p>
 
           <p className="text-sm sm:text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">
             {renderTagline(personalInfo.tagline)}
           </p>
 
-          <p className="text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-300">
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-200 max-w-xl">
             {personalInfo.description}
           </p>
         </div>

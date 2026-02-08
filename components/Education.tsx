@@ -5,11 +5,11 @@ export function Education() {
   return (
     <section id="education" className="space-y-6 scroll-mt-20">
       <div className="space-y-2">
-        <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase font-fraunces text-lg">
           EDUCATION
         </h2>
 
-        <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+        <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
           My educational background and qualifications:
         </p>
       </div>
