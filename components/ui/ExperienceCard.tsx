@@ -9,7 +9,7 @@ interface ExperienceCardProps {
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <div className="relative pl-6 sm:pl-8 pb-10 sm:pb-12 last:pb-0 group">
-      <div className="absolute left-0 sm:left-1 top-0.5 sm:top-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#db775b] rounded-full ring-4 ring-white dark:ring-neutral-700" />
+      <div className="absolute left-0 sm:left-1 top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#db775b] rounded-full ring-4 ring-white dark:ring-neutral-700" />
 
       <div className="absolute left-[4px] sm:left-[8.5px] top-4 sm:top-5 bottom-0 w-px sm:w-0.5 bg-neutral-300 dark:bg-neutral-700 group-last:hidden"></div>
 
