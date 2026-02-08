@@ -9,7 +9,6 @@ const MASK_NAV_BODY = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.or
 const MASK_WIGGLE_LINE = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 1 10 5 T 20 5" stroke="black" stroke-width="2" fill="none"/></svg>')`;
 
 const navItems = [
-  { label: "Home", href: "#home" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
@@ -111,7 +110,7 @@ export function Navbar() {
                 <button
                   key={item.href}
                   onClick={() => handleNavigation(item.href)}
-                  className={`text-sm font-medium transition-colors  cursor-pointer text-neutral-600 dark:text-neutral-300/95 lowercase hover:text-[#db775b]`}
+                  className={`text-sm font-medium font-mono tracking-tight leading-none transition-colors  cursor-pointer text-neutral-600 dark:text-neutral-300/95 lowercase hover:text-[#db775b]`}
                 >
                   {item.label}
                 </button>

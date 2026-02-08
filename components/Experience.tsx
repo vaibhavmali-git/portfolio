@@ -60,8 +60,8 @@ export function Experience() {
               <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase tracking-wider font-serif text-lg">
                 WORK EXPERIENCE
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-                Recent positions and professional growth:
+              <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+                Recent positions:
               </p>
             </div>
 

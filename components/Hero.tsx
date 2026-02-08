@@ -55,8 +55,8 @@ export function Hero() {
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300 font-geistMono">
           <p className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
-            <MapPinLine size={17} weight="regular" className="-mt-0.5" />
-            <span>{personalInfo.location}</span>
+            <MapPinLine size={17} weight="duotone" className="-mt-0.5" />
+            <span className="font-mono tracking-tight leading-none font-medium">{personalInfo.location}</span>
           </p>
 
           <p className="text-sm sm:text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">

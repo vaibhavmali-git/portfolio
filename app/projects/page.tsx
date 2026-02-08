@@ -16,14 +16,14 @@ export default function ProjectsPage() {
           <button
             onClick={() => router.back()}
             type="button"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all group cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 dark:text-neutral-200 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all group cursor-pointer"
           >
             <ArrowCircleLeft
               size={20}
               weight="regular"
               className="transition-transform duration-300 group-hover:-translate-x-1"
             />
-            <span>Back</span>
+            <span className="font-mono tracking-tight leading-none font-medium">Back</span>
           </button>
         </div>
 
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
           <h1 className="text-3xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-tight">
             All Projects
           </h1>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-xl">
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-xl font-mono tracking-tight leading-none font-medium">
             A complete archive of the production applications and personal
             experiments I've built.
           </p>
