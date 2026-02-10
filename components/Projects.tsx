@@ -17,7 +17,7 @@ export function Projects() {
             {shippedProjects.length > 2 && (
               <Link
                 href="/projects"
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-200 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap -mt-1.5 sm:-mt-2 font-mono tracking-tight leading-none font-medium"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-200 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap -mt-1.5 sm:-mt-2   tracking-tight leading-none font-medium"
               >
                 view more
                 <ArrowCircleRight
@@ -27,9 +27,9 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm   tracking-tight leading-none font-medium">
             Projects I worked on at{" "}
-            <span className="font-semibold text-neutral-900 dark:text-neutral-100 text-xs sm:text-sm font-mono tracking-tight leading-none">
+            <span className="font-semibold text-neutral-900 dark:text-neutral-100 text-xs sm:text-sm   tracking-tight leading-none">
               QuadB Technologies
             </span>
             :
@@ -52,7 +52,7 @@ export function Projects() {
             {personalProjects.length > 2 && (
               <Link
                 href="/projects#personal"
-                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-200 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap -mt-1.5 sm:-mt-2 font-mono tracking-tight leading-none font-medium"
+                className="group flex items-center gap-1 text-[13px] sm:text-sm text-neutral-900 dark:text-neutral-200 hover:text-[#db775b] dark:hover:text-[#db775b] active:scale-95 duration-200 transition-all whitespace-nowrap -mt-1.5 sm:-mt-2   tracking-tight leading-none font-medium"
               >
                 view more
                 <ArrowCircleRight
@@ -62,7 +62,7 @@ export function Projects() {
               </Link>
             )}
           </div>
-          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm   tracking-tight leading-none font-medium">
             My personal projects:
           </p>
         </div>

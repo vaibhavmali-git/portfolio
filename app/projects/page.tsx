@@ -23,7 +23,7 @@ export default function ProjectsPage() {
               weight="regular"
               className="transition-transform duration-300 group-hover:-translate-x-1"
             />
-            <span className="font-mono tracking-tight leading-none font-medium">Back</span>
+            <span className="  tracking-tight leading-none font-medium">Back</span>
           </button>
         </div>
 
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
           <h1 className="text-3xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-tight">
             All Projects
           </h1>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-xl font-mono tracking-tight leading-none font-medium">
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-xl   tracking-tight leading-none font-medium">
             A complete archive of the production applications and personal
             experiments I've built.
           </p>

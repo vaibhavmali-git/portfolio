@@ -74,16 +74,16 @@ export const techStack: TechStackItem[] = [
   },
   
   // --- Build & Foundations ---
-  { 
-    name: "Vite", 
-    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" /> 
-  },
-  { 
-    name: "HTML5", 
-    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /> 
-  },
-  { 
-    name: "CSS3", 
-    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /> 
-  }
+  // { 
+  //   name: "Vite", 
+  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" /> 
+  // },
+  // { 
+  //   name: "HTML5", 
+  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /> 
+  // },
+  // { 
+  //   name: "CSS3", 
+  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /> 
+  // }
 ];

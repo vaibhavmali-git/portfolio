@@ -24,7 +24,7 @@ export function Experience() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`
-                relative flex-1 py-2 text-xs sm:text-sm font-mono font-medium rounded-lg transition-colors duration-200 z-10 outline-none cursor-pointer text-center
+                relative flex-1 py-2 text-xs sm:text-sm   font-medium rounded-lg transition-colors duration-200 z-10 outline-none cursor-pointer text-center
                 ${
                   activeTab === tab.id
                     ? "text-neutral-900 dark:text-neutral-100"
@@ -60,7 +60,7 @@ export function Experience() {
               <h2 className="font-semibold text-neutral-900 dark:text-neutral-200 uppercase font-fraunces text-lg">
                 WORK EXPERIENCE
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+              <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm   tracking-tight leading-none font-medium">
                 Recent positions:
               </p>
             </div>

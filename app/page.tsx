@@ -21,10 +21,7 @@ export default function Home() {
       <Projects />
       <Divider />
 
-      <About />
-
       <Contacts />
-
     </main>
   );
 }

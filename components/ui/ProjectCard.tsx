@@ -89,7 +89,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {techStack.map((tech, index) => (
               <span
                 key={index}
-                className="px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-[11px] font-medium rounded-md text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700/30  font-mono tracking-tight leading-none"
+                className="px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-[11px] font-medium rounded-md text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700/30    tracking-tight leading-none"
               >
                 {tech}
               </span>

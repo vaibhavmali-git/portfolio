@@ -9,7 +9,7 @@ export function Education() {
           EDUCATION
         </h2>
 
-        <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm font-mono tracking-tight leading-none font-medium">
+        <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm   tracking-tight leading-none font-medium">
           My educational background and qualifications:
         </p>
       </div>

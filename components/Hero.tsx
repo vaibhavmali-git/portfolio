@@ -15,7 +15,7 @@ export function Hero() {
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return (
-          <span key={index} className="bg-[#efa490] dark:bg-[#db775b] text-neutral-900">
+          <span key={index} className="text-[#db775b] font-bold">
             {part}
           </span>
         );
