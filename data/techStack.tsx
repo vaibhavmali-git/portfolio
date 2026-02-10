@@ -10,7 +10,7 @@ const TechIcon = ({ src, alt, className = "" }: { src: string, alt: string, clas
 );
 
 export const techStack: TechStackItem[] = [
-  // --- Core Frontend & Languages ---
+  // --- Core Frontend & Mobile ---
   { 
     name: "React", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /> 
@@ -23,23 +23,21 @@ export const techStack: TechStackItem[] = [
     name: "TypeScript", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /> 
   },
-
+  
   { 
     name: "Tailwind", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" /> 
   },
+  { 
+    name: "Framer Motion", 
+    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg" alt="Framer Motion" className="dark:invert" /> 
+  },
   
-  // --- Backend & API ---
+  // --- Backend & Database ---
   { 
     name: "Node.js", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /> 
   },
-  { 
-    name: "Express.js", 
-    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" className="dark:invert" /> 
-  },
-  
-  // --- Databases ---
   { 
     name: "PostgreSQL", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /> 
@@ -69,21 +67,12 @@ export const techStack: TechStackItem[] = [
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" /> 
   },
   { 
+    name: "React Native", 
+    icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" /> 
+  },
+  { 
     name: "Firebase", 
     icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" /> 
   },
   
-  // --- Build & Foundations ---
-  // { 
-  //   name: "Vite", 
-  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" /> 
-  // },
-  // { 
-  //   name: "HTML5", 
-  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /> 
-  // },
-  // { 
-  //   name: "CSS3", 
-  //   icon: <TechIcon src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /> 
-  // }
 ];
