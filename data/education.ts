@@ -1,11 +1,12 @@
 import { Education } from '@/types';
 
 export const education: Education[] = [
-    {
+  {
     id: 1,
     degree: "Masters of Computer Application (MCA)",
     institution: "Jain Deemed to be University",
-    period: "Currently Pursuing",
+    period: "Aug 2023 – May 2025",
+    cgpa: "7.45",
     highlights: [
       "Advanced coursework in software development and computer science",
       "Specializing in scalable system design and modern development practices"
@@ -22,5 +23,5 @@ export const education: Education[] = [
       "Practical experience through internships and projects"
     ]
   },
-  
+
 ];
