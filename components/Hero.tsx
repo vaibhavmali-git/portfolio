@@ -10,12 +10,16 @@ export function Hero() {
     ["GitHub", "LinkedIn", "Email"].includes(link.name),
   );
 
-  const renderTagline = (text: string) => {
+  const renderFormattedText = (text: string, highlight = false) => {
     const parts = text.split("*");
+
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return (
-          <span key={index} className="text-[#db775b] font-bold">
+          <span
+            key={index}
+            className={highlight ? "text-[#db775b] font-bold" : "font-semibold"}
+          >
             {part}
           </span>
         );
@@ -27,8 +31,10 @@ export function Hero() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute("href");
+
     if (href?.startsWith("#")) {
       const element = document.querySelector(href);
+
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -37,7 +43,7 @@ export function Hero() {
 
   return (
     <section id="home" className="space-y-6 scroll-mt-20 pt-2.5">
-      <div className="w-18 h-18 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-700">
+      <div className="w-18 h-18 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-700 shadow-lg">
         <Image
           src="/images/profile.webp"
           alt={`${personalInfo.name} profile photo`}
@@ -50,7 +56,9 @@ export function Hero() {
       <div className="space-y-4">
         <h1 className="text-3xl sm:text-4xl md:text-4xl font-medium text-neutral-900 dark:text-neutral-100 font-serif tracking-[-1.5px]">
           Hey, I'm <span className="font-serif">{personalInfo.name}.</span>
-          <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">👋</span>
+          <span className="inline-block ml-2 animate-wave cursor-default origin-[70%_70%]">
+            👋
+          </span>
         </h1>
 
         <div className="space-y-3 text-neutral-700 dark:text-neutral-300">
@@ -60,11 +68,15 @@ export function Hero() {
           </p>
 
           <p className="text-sm sm:text-lg leading-relaxed font-medium text-neutral-900 dark:text-neutral-200">
-            {renderTagline(personalInfo.tagline)}
+            {renderFormattedText(personalInfo.tagline, true)}
           </p>
 
           <p className="text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-200 max-w-xl">
-            {personalInfo.description}
+            {renderFormattedText(personalInfo.description)}
+          </p>
+
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 text-neutral-900 dark:text-neutral-200 max-w-xl">
+            {renderFormattedText(personalInfo.description2)}
           </p>
         </div>
 
@@ -78,7 +90,7 @@ export function Hero() {
               className="flex items-center justify-center w-8.5 h-8.5 sm:w-10 sm:h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-[0.55rem] text-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-600 hover:shadow-sm dark:hover:shadow-neutral-900/50 shrink-0 active:scale-90 duration-200 transition-all"
               aria-label={link.name}
             >
-              <span className="shrink-0 scale-90 sm:scale-100 ">
+              <span className="shrink-0 scale-90 sm:scale-100">
                 {link.icon}
               </span>
             </a>
